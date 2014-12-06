@@ -19,7 +19,7 @@ import java.util.ArrayList;
  *
  * @author Ileana Ontiveros
  */
-@WebService(serviceName = "CarRentalWS")
+@WebService(serviceName = "BechCarRentalWS")
 @Stateless()
 public class BechCarRentalWS {
     
