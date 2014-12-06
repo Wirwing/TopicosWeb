@@ -13,11 +13,7 @@ import KutzCarRental.Domain.Car;
 import KutzCarRental.Domain.Reservation;
 import KutzCarRental.Utils.Utils;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Map;
 
 /**
  *
@@ -25,7 +21,7 @@ import java.util.Map;
  */
 @WebService(serviceName = "CarRentalWS")
 @Stateless()
-public class CarRentalWS {
+public class KutzCarRentalWS {
     
     /**
      * Obtener una lista de autos para rentar
