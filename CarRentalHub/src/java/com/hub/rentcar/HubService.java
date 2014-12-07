@@ -20,6 +20,12 @@ public class HubService {
 
     private static List<CarRentLog> registry = new ArrayList<CarRentLog>();
     private static DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+    private static final List<RentalProvider> rentalProviders = new ArrayList<RentalProvider>();
+    
+    static{
+        rentalProviders.add(new RentalProvider("bech", "Bech Car Merida"));
+        rentalProviders.add(new RentalProvider("kutz", "Kutz Car Montejo"));
+    }
     
     @WebMethod(operationName = "getRegistry")
     public List<CarRentLog> getRegistry() {
@@ -41,6 +47,11 @@ public class HubService {
         registry.add(log);
         
         return log;
+    }
+    
+    @WebMethod(operationName = "getRentalProviders")
+    public List<RentalProvider> getRentalProviders(){
+        return rentalProviders;
     }
     
 }
