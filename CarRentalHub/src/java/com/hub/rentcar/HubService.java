@@ -8,6 +8,7 @@ import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.ejb.Stateless;
+import javax.jws.WebParam;
 
 /**
  *
@@ -26,7 +27,9 @@ public class HubService {
     }
     
     @WebMethod(operationName = "addRegistry")
-    public CarRentLog addRegistry(String id, String userId, String providerUUID) {
+    public CarRentLog addRegistry(@WebParam(name = "id")String id, 
+    @WebParam(name = "userId") String userId, 
+    @WebParam(name = "providerUUID")String providerUUID) {
         
         CarRentLog log = new CarRentLog();
         log.setId(id);
@@ -34,6 +37,8 @@ public class HubService {
         log.setUserId(userId);
         log.setStatus(CarRentLog.BOOKED_STATUS);
         log.setBookedDate(df.format(new Date()));
+        
+        registry.add(log);
         
         return log;
     }

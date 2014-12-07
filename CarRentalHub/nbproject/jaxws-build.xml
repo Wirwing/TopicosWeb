@@ -30,4 +30,31 @@
                 JAX-WS WSIMPORT SECTION
                 ===================
             -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <mkdir dir="${classes.dir}"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${j2ee.platform.wsimport.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-HubService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/HubService"/>
+        <property name="wsdl-HubService" location="${meta.inf}/xml-resources/web-service-references/HubService/wsdl/localhost_8080/HubService/HubService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/HubService" destdir="${build.generated.dir}/jax-wsCache/HubService" wsdl="${wsdl-HubService}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080//HubService/HubService?wsdl" xnocompile="true" target="2.1">
+            <depends file="${wsdl-HubService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/HubService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/HubService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-HubService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/HubService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/hub/rentcar"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-HubService"/>
 </project>
