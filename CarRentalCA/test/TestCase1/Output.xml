@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:CarRentalWSDLOperationResponse xmlns:m="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalWSDL">
+      <providers xmlns:msgns="http://rentcar.hub.com/">
+        <return>
+          <id>bech</id>
+          <name>Bech Car Merida</name>
+        </return>
+        <return>
+          <id>kutz</id>
+          <name>Kutz Car Montejo</name>
+        </return>
+      </providers>
+    </m:CarRentalWSDLOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
