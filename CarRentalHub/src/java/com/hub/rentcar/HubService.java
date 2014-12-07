@@ -1,5 +1,7 @@
 package com.hub.rentcar;
 
+import com.hub.rentcar.models.RentalProvider;
+import com.hub.rentcar.models.CarRentLog;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
