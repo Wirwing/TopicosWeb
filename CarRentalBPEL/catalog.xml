@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <nextCatalog catalog="nbproject/private/retriever/catalog.xml"/>
+    <system systemId="http://192.168.1.77:8080/HubService/HubService?wsdl" uri="src/192.168.1.77_8080/HubService/HubService.wsdl"/>
+    <system systemId="http://192.168.1.77:8080/HubService/HubService?xsd=1" uri="src/192.168.1.77_8080/HubService/HubService.xsd_1.xsd"/>
 </catalog>
