@@ -45,7 +45,7 @@ public class BechCarRentalWS {
      * Reservar un auto
      */
     @WebMethod(operationName = "createReservation")
-    public boolean createReservation(@WebParam(name = "rentalDate") String rentalDate,
+    public Reservation createReservation(@WebParam(name = "rentalDate") String rentalDate,
         @WebParam(name = "returnDate") String returnDate, 
         @WebParam(name = "idCar") int idCar) throws ParseException {
         
@@ -57,9 +57,9 @@ public class BechCarRentalWS {
             double priceTotal = totalDays*pricePerDay;
             Reservation reservation = new Reservation(rentalDate, returnDate, idCar, priceTotal);
             isBooked = DataBase.getDB().addReservation(reservation, idCar);
-            return true;
+            return reservation;
         } catch (Exception e){
-            return false;
+            return null;
         } 
         
     }
