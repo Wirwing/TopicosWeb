@@ -4,8 +4,6 @@
  */
 package BechCarRental.Domain;
 
-import java.util.Date;
-
 /**
  *
  * @author Ileana Ontiveros
@@ -20,6 +18,9 @@ public class Reservation {
     int idCar;
     double totalPrice;
 
+    public Reservation() {
+    }
+    
     public Reservation(String rentalDate, String returnDate, int idCar, double totalPrice) {
         this.idReservation = countReservations++;
         this.rentalDate = rentalDate;
