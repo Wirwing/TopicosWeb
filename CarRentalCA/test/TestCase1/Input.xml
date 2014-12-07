@@ -1,7 +1,0 @@
-<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:car="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalWSDL">
-  <soapenv:Body>
-    <car:CarRentalWSDLOperation>
-      <operationName>0</operationName>
-    </car:CarRentalWSDLOperation>
-  </soapenv:Body>
-</soapenv:Envelope>
