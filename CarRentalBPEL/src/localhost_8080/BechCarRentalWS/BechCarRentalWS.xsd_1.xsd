@@ -35,7 +35,7 @@
 <xs:complexType name="reservation">
 <xs:sequence>
 <xs:element name="idCar" type="xs:int"/>
-<xs:element name="idReservation" type="xs:int"/>
+<xs:element name="idReservation" type="xs:string"/>
 <xs:element name="rentalDate" type="xs:string" minOccurs="0"/>
 <xs:element name="returnDate" type="xs:string" minOccurs="0"/>
 <xs:element name="totalPrice" type="xs:double"/>

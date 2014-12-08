@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1 (branches/2.1-6844; 2011-07-29T12:07:24+0000) JAXWS-RI/2.2.5 JAXWS/2.2. --><xs:schema xmlns:tns="http://WS.KutzCarRental/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS.KutzCarRental/">
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1 (branches/2.1-6844; 2011-07-29T12:07:24+0000) JAXWS-RI/2.2.5 JAXWS/2.2. --><xs:schema xmlns:tns="http://WS.BechCarRental/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://WS.BechCarRental/">
 
 <xs:element name="ParseException" type="tns:ParseException"/>
 
@@ -35,7 +35,7 @@
 <xs:complexType name="reservation">
 <xs:sequence>
 <xs:element name="idCar" type="xs:int"/>
-<xs:element name="idReservation" type="xs:string"/>
+<xs:element name="idReservation" type="xs:string" minOccurs="0"/>
 <xs:element name="rentalDate" type="xs:string" minOccurs="0"/>
 <xs:element name="returnDate" type="xs:string" minOccurs="0"/>
 <xs:element name="totalPrice" type="xs:double"/>
@@ -59,15 +59,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="findCarById">
-<xs:sequence>
-<xs:element name="idCar" type="xs:int"/>
-</xs:sequence>
+<xs:complexType name="getCars">
+<xs:sequence/>
 </xs:complexType>
 
-<xs:complexType name="findCarByIdResponse">
+<xs:complexType name="getCarsResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:car" minOccurs="0"/>
+<xs:element name="return" type="tns:car" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -84,13 +82,15 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getCars">
-<xs:sequence/>
+<xs:complexType name="findCarById">
+<xs:sequence>
+<xs:element name="idCar" type="xs:int"/>
+</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getCarsResponse">
+<xs:complexType name="findCarByIdResponse">
 <xs:sequence>
-<xs:element name="return" type="tns:car" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="return" type="tns:car" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema 
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/CarRentalSchema"
+    targetNamespace="http://xml.netbeans.org/schema/CarRentalSchema">
+
+    <xsd:complexType name="RentRequestComplexType">
+        <xsd:sequence>
+            <xsd:element name="rentalDate" type="xsd:string"></xsd:element>
+                <xsd:element name="returnDate" type="xsd:string"></xsd:element>
+                <xsd:element name="idCar" type="xsd:int"></xsd:element>
+                <xsd:element name="userId" type="xsd:string"></xsd:element>
+                <xsd:element name="providerId" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:element name="rentRequest" type="tns:RentRequestComplexType"></xsd:element>
+    
+</xsd:schema>
