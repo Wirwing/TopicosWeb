@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?wsdl" uri="src/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl"/>
+    <system systemId="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?xsd=1" uri="src/localhost_8080/BechCarRentalWS/BechCarRentalWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?wsdl" uri="src/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl"/>
+    <system systemId="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?xsd=1" uri="src/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/HubService/HubService?wsdl" uri="src/localhost_8080/HubService/HubService.wsdl"/>
+    <system systemId="http://localhost:8080/HubService/HubService?xsd=1" uri="src/localhost_8080/HubService/HubService.xsd_1.xsd"/>
+</catalog>

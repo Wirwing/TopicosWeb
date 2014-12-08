@@ -10,7 +10,7 @@
         </service-engine-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="CorrelationSampleComApp-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port bindingType="soap" x="68" y="118">
+                <port bindingType="soap" x="148" y="118">
                     <link xlink:href="../jbiasa/CorrelationSampleComApp.wsdl#xpointer(/definitions/service[@name='CorrelationSampleComAppService1']/port[@name='casaPort1'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint1"/>
                     <provides endpoint="endpoint1"/>
@@ -35,8 +35,8 @@
         <link xlink:href="../jbiServiceUnits/CorrelationSampleComApp.wsdl#xpointer(/definitions/service[@name='CorrelationSampleComAppService1'])" xlink:type="simple"/>
     </services>
     <regions>
-        <region name="WSDL Endpoints" width="151"/>
-        <region name="JBI Modules" width="263"/>
+        <region name="WSDL Endpoints" width="231"/>
+        <region name="JBI Modules" width="423"/>
         <region name="External Modules" width="200"/>
     </regions>
 </casa>

@@ -4,6 +4,8 @@
  */
 package BechCarRental.Domain;
 
+import java.util.UUID;
+
 /**
  *
  * @author Ileana Ontiveros
@@ -12,7 +14,7 @@ public class Reservation {
     
     private static int countReservations = 1;
     
-    int idReservation;
+    String idReservation;
     String rentalDate;
     String returnDate;
     int idCar;
@@ -22,7 +24,7 @@ public class Reservation {
     }
     
     public Reservation(String rentalDate, String returnDate, int idCar, double totalPrice) {
-        this.idReservation = countReservations++;
+        this.idReservation = UUID.randomUUID().toString();
         this.rentalDate = rentalDate;
         this.returnDate = returnDate;
         this.idCar = idCar;
@@ -37,11 +39,11 @@ public class Reservation {
         Reservation.countReservations = countReservations;
     }
 
-    public int getIdReservation() {
+    public String getIdReservation() {
         return idReservation;
     }
 
-    public void setIdReservation(int idReservation) {
+    public void setIdReservation(String idReservation) {
         this.idReservation = idReservation;
     }
 
