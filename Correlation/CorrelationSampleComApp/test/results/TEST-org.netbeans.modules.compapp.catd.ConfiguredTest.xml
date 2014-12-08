@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="1" hostname="Ile-PC" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="2.379" timestamp="2014-10-07T16:58:26">
+<testsuite errors="0" failures="1" hostname="Office-Depot" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="1" time="1.196" timestamp="2014-12-08T03:36:28">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="MX" />
@@ -10,7 +10,7 @@
     <property name="libs.junit.javadoc" value="C:\OpenESB-v2.3.1\netbeans\java\docs\junit-3.8.2-api.zip" />
     <property name="ant.core.lib" value="C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant.jar" />
     <property name="libs.jsp-compilation.javadoc" value="" />
-    <property name="user.dir" value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp" />
+    <property name="user.dir" value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp" />
     <property name="libs.javaee-api-7.0.src" value="" />
     <property name="libs.hibernate-persistence.javadoc" value="" />
     <property name="java.vm.version" value="24.65-b04" />
@@ -27,7 +27,7 @@
     <property name="jdk.home" value="C:\Program Files\Java\jdk1.7.0_67" />
     <property name="libs.javac-api.src" value="" />
     <property name="xml.module.install.dir" value="C:\OpenESB-v2.3.1\netbeans\soa\modules" />
-    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="sun.os.patch.level" value="" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="libs.Encoder-Custom.javadoc" value="" />
     <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
@@ -37,7 +37,7 @@
     <property name="j2ee.server.instance" value="[C:\OpenESB-v2.3.1\glassfish]deployer:Sun:AppServer::localhost:4848" />
     <property name="netbeans.derby.system.home" value="C:\OpenESB-v2.3.1\glassfish\databases" />
     <property name="libs.javac-api.javadoc" value="" />
-    <property name="os.name" value="Windows 7" />
+    <property name="os.name" value="Windows 8.1" />
     <property name="esb.netbeans.platform" value="C:\OpenESB-v2.3.1\netbeans\platform" />
     <property name="libs.beans-binding.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\modules\ext\beansbinding-1.2.1.jar" />
     <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
@@ -47,16 +47,16 @@
     <property name="libs.spring-webmvc3.0.src" value="" />
     <property name="libs.restapi.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\rest\jsr311-api-1.1.1.jar" />
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
-    <property name="netbeans.user.dir" value="C:\OpenESB-v2.3.1\netbeans\bin" />
+    <property name="netbeans.user.dir" value="C:\OpenESB-v2.3.1\netbeans" />
     <property name="libs.jaxb.maven-pom" value="" />
-    <property name="os.arch" value="x86" />
+    <property name="os.arch" value="amd64" />
     <property name="libs.Encoder-Custom.classpath" value="C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\custom.jar;C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\customencoder-xsdextension.jar" />
     <property name="libs.eclipselink.src" value="" />
-    <property name="user.name" value="Ileana Ontiveros" />
+    <property name="user.name" value="Irving" />
     <property name="libs.jsf12.javadoc" value="C:\OpenESB-v2.3.1\netbeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\ILEANA~1\AppData\Local\Temp\junitvmwatcher4978432945635898155.properties propsfile=C:\Users\ILEANA~1\AppData\Local\Temp\junit2486465260085624702.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\Irving\AppData\Local\Temp\junitvmwatcher2011607584791341154.properties propsfile=C:\Users\Irving\AppData\Local\Temp\junit5462039688165935240.properties" />
     <property name="build.classes.dir" value="build/jar" />
     <property name="enterprise.module.install.dir" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules" />
     <property name="libs.javaee-endorsed-api-7.0.javadoc" value="C:\OpenESB-v2.3.1\netbeans\enterprise\docs\javaee-doc-api.jar" />
@@ -102,13 +102,13 @@
     <property name="libs.testng.classpath" value="C:\OpenESB-v2.3.1\netbeans\platform\modules\ext\testng-6.5.1-dist.jar" />
     <property name="libs.absolutelayout.maven-pom" value="" />
     <property name="ant.java.version" value="1.7" />
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Java\jdk1.7.0_67\bin;C:\Program Files\GTK2-Runtime\bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Git\cmd;C:\scala\bin;C:\FrameworkPlay\play-2.2.1;." />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.8.0_20;C:\wamp\bin\php\php5.5.12;C:\ProgramData\ComposerSetup\bin;C:\Users\Irving\AppData\Local\GitHub\PortableGit_ed44d00daa128db527396557813e7b68709ed0e2\bin;C:\Users\Irving\AppData\Local\GitHub\PortableGit_ed44d00daa128db527396557813e7b68709ed0e2\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.7.0_67\bin;C:\Program Files (x86)\Android\android-sdk\tools;C:\Program Files (x86)\Android\android-sdk\platform-tools;C:\Users\Irving\AppData\Roaming\npm;." />
     <property name="libs.metro.maven-pom" value="" />
     <property name="libs.Encoder-HL7.classpath" value="C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\hl7.jar;C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\hl7encoder-xsdextension.jar" />
     <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
     <property name="libs.PostgreSQLDriver.src" value="" />
-    <property name="sun.arch.data.model" value="32" />
-    <property name="basedir" value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="libs.javaee-web-api-7.0.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\javaee-web-api-7.0.jar" />
     <property name="libs.jstl11.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\standard.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jstl.jar" />
@@ -121,7 +121,7 @@
     <property name="user.language" value="es" />
     <property name="libs.Encoder-Framework.src" value="" />
     <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
-    <property name="ant.file." value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp\build.xml" />
+    <property name="ant.file." value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp\build.xml" />
     <property name="libs.spring-framework.classpath" value="C:\OpenESB-v2.3.1\netbeans\ide\modules\org-apache-commons-logging.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\cglib-2.2.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\spring\spring-2.5.6.SEC03.jar" />
     <property name="libs.eclipselink.maven-pom" value="" />
     <property name="libs.primefaces.javadoc" value="" />
@@ -162,7 +162,7 @@
     <property name="libs.JAX-WS-ENDORSED.src" value="" />
     <property name="libs.junit_4.javadoc" value="C:\OpenESB-v2.3.1\netbeans\java\docs\junit-4.10-javadoc.jar" />
     <property name="libs.spring-webmvc.javadoc" value="" />
-    <property name="test.results.dir" value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp/test/results" />
+    <property name="test.results.dir" value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp/test/results" />
     <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
     <property name="libs.hibernate-support.src" value="" />
     <property name="jna.boot.library.name" value="jnidispatch-340" />
@@ -174,11 +174,11 @@
     <property name="libs.spring-webmvc3.0.javadoc" value="" />
     <property name="nb.native.filechooser" value="false" />
     <property name="libs.restapi.src" value="" />
-    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
     <property name="sun.java2d.noddraw" value="true" />
     <property name="libs.jsp-compiler.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\ant\extra\jspcompile.jar" />
     <property name="libs.spring-webmvc.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\spring\spring-webmvc-2.5.6.SEC03.jar" />
-    <property name="ant.file" value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp\build.xml" />
+    <property name="ant.file" value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp\build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="com.sun.jbi.routing.bc.autoconnect" value="true" />
     <property name="libs.jsf12.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\commons-beanutils.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\commons-collections.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\commons-digester.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\commons-logging.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\jsf-api.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-1_2\jsf-impl.jar" />
@@ -190,13 +190,12 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation" />
     <property name="libs.swing-layout.src" value="C:\OpenESB-v2.3.1\netbeans\platform\docs\swing-layout-1.0.4-src.zip" />
     <property name="org.openide.major.version" value="IDE/1" />
-    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
     <property name="libs.Encoder-Custom.maven-pom" value="" />
     <property name="netbeans.user" value="C:\OpenESB-v2.3.1\.netbeans\openesb" />
-    <property name="java.io.tmpdir" value="C:\Users\ILEANA~1\AppData\Local\Temp\" />
+    <property name="java.io.tmpdir" value="C:\Users\Irving\AppData\Local\Temp\" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
     <property name="libs.jsp-compiler.src" value="" />
-    <property name="org.openide.awt.ActionReference.completion" value="org.netbeans.modules.apisupport.project.layers.PathCompletions" />
     <property name="libs.Encoder-COCO.src" value="" />
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\bin" />
     <property name="libs.jsf20.classpath" value="C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
@@ -205,14 +204,14 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="" />
     <property name="libs.PojoSELib.javadoc" value="C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\sun-pojo-engine-api-javadoc.jar" />
-    <property name="netbeans.hash.code" value="unique=NB_GLASSFISH093d5d03f-4ab5-42a4-8610-0202b251e7bc_9af300ec-8953-4dec-8048-eac0430933a8" />
+    <property name="netbeans.hash.code" value="unique=NB_GLASSFISH0f1c50104-0bf3-407f-862f-3567204776cf_acb06789-8853-4b59-8c53-892ffab230a7" />
     <property name="netbeans.default_userdir_root" value="" />
     <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
-    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+    <property name="sun.cpu.isalist" value="amd64" />
     <property name="libs.CopyLibs.javadoc" value="" />
     <property name="org.openide.specification.version" value="6.2" />
     <property name="libs.hibernate-support.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\antlr-2.7.6.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\asm.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\asm-attrs.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\cglib-2.1.3.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\commons-collections-2.1.1.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-apache-commons-logging.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\dom4j-1.6.1.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\ehcache-1.2.3.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\jdbc2_0-stdext.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\jta.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\hibernate3.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\hibernate-tools.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\hibernate-annotations.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\hibernate-commons-annotations.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\hibernate-entitymanager.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\hibernate\javassist.jar" />
-    <property name="user.home" value="C:\Users\Ileana Ontiveros" />
+    <property name="user.home" value="C:\Users\Irving" />
     <property name="libs.primefaces.maven-pom" value="" />
     <property name="com.sun.jbi.routing" value="true" />
     <property name="libs.javaee-api-6.0.maven-pom" value="" />
@@ -225,7 +224,7 @@
     <property name="libs.Encoder-COCO.maven-pom" value="" />
     <property name="resource.CorrelationSample" value="../CorrelationSample/setup" />
     <property name="ide.module.install.dir" value="C:\OpenESB-v2.3.1\netbeans\ide\modules" />
-    <property name="ant.file.CorrelationSampleComApp-jbi-impl" value="C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp\nbproject\build-impl.xml" />
+    <property name="ant.file.CorrelationSampleComApp-jbi-impl" value="C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp\nbproject\build-impl.xml" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="libs.javac-api.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\modules\ext\nb-javac-api.jar" />
     <property name="java.version" value="1.7.0_67" />
@@ -256,7 +255,7 @@
     <property name="line.separator" value="&#xd;&#xa;" />
     <property name="java.specification.version" value="1.7" />
     <property name="libs.jaxws21.maven-pom" value="" />
-    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="java.vm.info" value="mixed mode" />
     <property name="nb.registration.enabled" value="false" />
     <property name="libs.spring-framework.maven-pom" value="" />
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_67\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_67\jre\classes" />
@@ -293,15 +292,15 @@
     <property name="libs.jsf20.javadoc" value="C:\OpenESB-v2.3.1\netbeans\enterprise\docs\javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_67\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
     <property name="libs.metro.src" value="" />
-    <property name="project.CorrelationSample" value="../CorrelationSample" />
     <property name="libs.absolutelayout.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\modules\ext\AbsoluteLayout.jar" />
+    <property name="project.CorrelationSample" value="../CorrelationSample" />
     <property name="libs.metro.classpath" value="C:\OpenESB-v2.3.1\netbeans\ide\modules\ext\jaxb\activation.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\metro\webservices-api.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\metro\webservices-extra.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\metro\webservices-rt.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\metro\webservices-tools.jar" />
     <property name="libs.restlib.maven-pom" value="" />
     <property name="jbi.content.component" value="sun-bpel-engine" />
     <property name="java.class.path" value="C:\OpenESB-v2.3.1\netbeans\soa\modules\org-netbeans-modules-compapp-manager-jbi.jar;C:\OpenESB-v2.3.1\netbeans\soa\modules\org-netbeans-modules-compapp-projects-jbi.jar;C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\jbi-admin-common.jar;C:\OpenESB-v2.3.1\netbeans\soa\modules\ext\catd.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\junit-3.8.2.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\jaxws22\api\saaj-api.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\jaxws22\saaj-impl.jar;C:\OpenESB-v2.3.1\netbeans\java\modules\ext\jaxws22\FastInfoset.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-lib.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-deprecated-pre65formatting.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-util.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-lib2.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-indent.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-plain.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-plain-lib.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-settings.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-editor-settings-storage.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-lexer.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-xml-core.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-xml-lexer.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-xml-text.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-xml-xdm.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-xml-xam.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\org-netbeans-modules-csl-api.jar;C:\OpenESB-v2.3.1\netbeans\ide\modules\ext\jaxb\activation.jar;C:\OpenESB-v2.3.1\netbeans\platform\lib\org-openide-modules.jar;C:\OpenESB-v2.3.1\netbeans\platform\lib\org-openide-util.jar;C:\OpenESB-v2.3.1\netbeans\platform\lib\org-openide-util-lookup.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-awt.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-options.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-text.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-loaders.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-nodes.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-netbeans-modules-editor-mimelookup.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-netbeans-modules-editor-mimelookup-impl.jar;C:\OpenESB-v2.3.1\netbeans\platform\core\org-openide-filesystems.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-netbeans-modules-keyring.jar;C:\OpenESB-v2.3.1\netbeans\platform\modules\org-openide-dialogs.jar;C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant-launcher.jar;C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant.jar;C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant-junit.jar;C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant-junit4.jar" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
-    <property name="os.version" value="6.1" />
+    <property name="os.version" value="6.3" />
     <property name="libs.javaee-api-7.0.maven-pom" value="" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
     <property name="sun.desktop" value="windows" />
@@ -327,22 +326,21 @@
     <property name="libs.PostgreSQLDriver.classpath" value="C:\OpenESB-v2.3.1\netbeans\ide\modules\ext\postgresql-9.2-1002.jdbc4.jar" />
     <property name="libs.jsf12.maven-pom" value="" />
     <property name="soa.module.install.dir" value="C:\OpenESB-v2.3.1\netbeans\soa\modules" />
-    <property name="libs.junit.src" value="" />
     <property name="libs.Encoder-Custom.src" value="" />
-    <property name="build.dir" value="build" />
+    <property name="libs.junit.src" value="" />
     <property name="libs.CopyLibs.src" value="" />
+    <property name="build.dir" value="build" />
     <property name="libs.jsp-compilation.classpath" value="C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\OpenESB-v2.3.1\netbeans\enterprise\modules\ext\jstl.jar;C:\OpenESB-v2.3.1\netbeans\java\ant\lib\ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
     <property name="file.encoding" value="Cp1252" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\OpenESB-v2.3.1\netbeans\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCorrelation" time="2.066">
-    <failure message=" Passed. Threads count Success: &lt;0&gt; Error: &lt;1&gt; Not completed: &lt;0&gt;&#xa;Details: &#xa;&lt;Concurrent test thread 0&gt; is Errored. Success rate 0/1 &#xa;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError:  Passed. Threads count Success: &lt;0&gt; Error: &lt;1&gt; Not completed: &lt;0&gt;
-Details: 
-&lt;Concurrent test thread 0&gt; is Errored. Success rate 0/1 
-
-	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:889)
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCase1" time="1.163">
+    <failure message="[7/12/2014 09:36:29 PM] The response is not identical to the expected output." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: [7/12/2014 09:36:29 PM] The response is not identical to the expected output.
+	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2354)
+	at org.netbeans.modules.compapp.catd.ConfiguredTest.checkExpectedOutput(ConfiguredTest.java:2224)
+	at org.netbeans.modules.compapp.catd.ConfiguredTest.testConcurrentSOAPRequest(ConfiguredTest.java:867)
 </failure>
   </testcase>
   <system-out><![CDATA[GenerateATSOutput=${generate.ats.output}
@@ -361,8 +359,8 @@ java.class.version=51.0
 java.endorsed.dirs=C:\Program Files\Java\jdk1.7.0_67\jre\lib\endorsed
 java.ext.dirs=C:\Program Files\Java\jdk1.7.0_67\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
 java.home=C:\Program Files\Java\jdk1.7.0_67\jre
-java.io.tmpdir=C:\Users\ILEANA~1\AppData\Local\Temp\
-java.library.path=C:\Program Files\Java\jdk1.7.0_67\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\PC Connectivity Solution\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Java\jdk1.7.0_67\bin;C:\Program Files\GTK2-Runtime\bin;C:\Python27\;C:\Python27\Scripts;C:\Program Files\Git\cmd;C:\scala\bin;C:\FrameworkPlay\play-2.2.1;.
+java.io.tmpdir=C:\Users\Irving\AppData\Local\Temp\
+java.library.path=C:\Program Files\Java\jdk1.7.0_67\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Java\jdk1.8.0_20;C:\wamp\bin\php\php5.5.12;C:\ProgramData\ComposerSetup\bin;C:\Users\Irving\AppData\Local\GitHub\PortableGit_ed44d00daa128db527396557813e7b68709ed0e2\bin;C:\Users\Irving\AppData\Local\GitHub\PortableGit_ed44d00daa128db527396557813e7b68709ed0e2\cmd;C:\Program Files\nodejs;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Java\jdk1.7.0_67\bin;C:\Program Files (x86)\Android\android-sdk\tools;C:\Program Files (x86)\Android\android-sdk\platform-tools;C:\Users\Irving\AppData\Roaming\npm;.
 java.runtime.name=Java(TM) SE Runtime Environment
 java.runtime.version=1.7.0_67-b01
 java.specification.name=Java Platform API Specification
@@ -372,8 +370,8 @@ java.vendor=Oracle Corporation
 java.vendor.url=http://java.oracle.com/
 java.vendor.url.bug=http://bugreport.sun.com/bugreport/
 java.version=1.7.0_67
-java.vm.info=mixed mode, sharing
-java.vm.name=Java HotSpot(TM) Client VM
+java.vm.info=mixed mode
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
 java.vm.specification.name=Java Virtual Machine Specification
 java.vm.specification.vendor=Oracle Corporation
 java.vm.specification.version=1.7
@@ -382,60 +380,31 @@ java.vm.version=24.65-b04
 line.separator=
 
 org.netbeans.modules.compapp.catd.context=
-os.arch=x86
-os.name=Windows 7
-os.version=6.1
+os.arch=amd64
+os.name=Windows 8.1
+os.version=6.3
 path.separator=;
-sun.arch.data.model=32
+sun.arch.data.model=64
 sun.boot.class.path=C:\Program Files\Java\jdk1.7.0_67\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_67\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_67\jre\classes
 sun.boot.library.path=C:\Program Files\Java\jdk1.7.0_67\jre\bin
 sun.cpu.endian=little
-sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+sun.cpu.isalist=amd64
 sun.desktop=windows
 sun.io.unicode.encoding=UnicodeLittle
-sun.java.command=org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\ILEANA~1\AppData\Local\Temp\junitvmwatcher4978432945635898155.properties propsfile=C:\Users\ILEANA~1\AppData\Local\Temp\junit2486465260085624702.properties
+sun.java.command=org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp\test\results\TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=C:\Users\Irving\AppData\Local\Temp\junitvmwatcher2011607584791341154.properties propsfile=C:\Users\Irving\AppData\Local\Temp\junit5462039688165935240.properties
 sun.java.launcher=SUN_STANDARD
 sun.jnu.encoding=Cp1252
-sun.management.compiler=HotSpot Client Compiler
-sun.os.patch.level=Service Pack 1
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=
 user.country=MX
-user.dir=C:\Users\Ileana Ontiveros\Documents\NetBeansProjects\CorrelationSampleComApp
-user.home=C:\Users\Ileana Ontiveros
+user.dir=C:\Users\Irving\Documents\Git\TopicosWeb\Correlation\CorrelationSampleComApp
+user.home=C:\Users\Irving
 user.language=es
-user.name=Ileana Ontiveros
+user.name=Irving
 user.script=
 user.timezone=America/Mexico_City
 user.variant=
-Test TestCorrelation\Concurrent.properties Failed. (Destination: http://localhost:${HttpDefaultPort}/CorrelationSampleComAppService1/casaPort1)
+Test TestCase1\Concurrent.properties Failed. (Destination: http://localhost:8081/CorrelationSampleComAppService1/casaPort1)
 ]]></system-out>
-  <system-err><![CDATA[oct 07, 2014 11:58:28 AM com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection post
-GRAVE: SAAJ0008: Bad Response; Not Found
-com.sun.xml.messaging.saaj.SOAPExceptionImpl: com.sun.xml.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:163)
-	at org.netbeans.modules.compapp.catd.util.Util.sendMessage(Util.java:347)
-	at org.netbeans.modules.compapp.catd.ConfiguredTest$ConcurrentTestSendOnlyRunnable.run(ConfiguredTest.java:2070)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: com.sun.xml.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:272)
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:159)
-	... 3 more
-
-CAUSE:
-
-com.sun.xml.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:272)
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:159)
-	at org.netbeans.modules.compapp.catd.util.Util.sendMessage(Util.java:347)
-	at org.netbeans.modules.compapp.catd.ConfiguredTest$ConcurrentTestSendOnlyRunnable.run(ConfiguredTest.java:2070)
-	at java.lang.Thread.run(Thread.java:745)
-
-CAUSE:
-
-com.sun.xml.messaging.saaj.SOAPExceptionImpl: Bad response: (404Not Found
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.post(HttpSOAPConnection.java:272)
-	at com.sun.xml.messaging.saaj.client.p2p.HttpSOAPConnection.call(HttpSOAPConnection.java:159)
-	at org.netbeans.modules.compapp.catd.util.Util.sendMessage(Util.java:347)
-	at org.netbeans.modules.compapp.catd.ConfiguredTest$ConcurrentTestSendOnlyRunnable.run(ConfiguredTest.java:2070)
-	at java.lang.Thread.run(Thread.java:745)
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
