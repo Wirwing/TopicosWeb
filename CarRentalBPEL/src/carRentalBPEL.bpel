@@ -10,7 +10,19 @@
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
     xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
     xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
-
-   <sequence>
+    <import namespace="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" location="BechCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://WS.BechCarRental/" location="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" location="KutzCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://WS.KutzCarRental/" location="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/HubServiceWrapper" location="HubServiceWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://rentcar.hub.com/" location="http://localhost:8080/HubService/HubService?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" location="CarRentalBPEL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="CarRentalBPELPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" partnerLinkType="tns:CarRentalBPEL" myRole="CarRentalBPELPortTypeRole"/>
+        <partnerLink name="BechRentalPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" partnerLinkType="tns:BechCarRentalWSLinkType" partnerRole="BechCarRentalWSRole"/>
+        <partnerLink name="KutzRentalPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" partnerLinkType="tns:KutzCarRentalWSLinkType" partnerRole="KutzCarRentalWSRole"/>
+        <partnerLink name="HubServicePartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/HubServiceWrapper" partnerLinkType="tns:HubServiceLinkType" partnerRole="HubServiceRole"/>
+    </partnerLinks>
+    <sequence>
    </sequence>
 </process>
