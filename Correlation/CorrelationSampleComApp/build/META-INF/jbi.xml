@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="CorrelationSampleComApp" xmlns:ns2="http://enterprise.netbeans.org/bpel/CorrelationSample/correlationSample" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>CorrelationSampleComApp</name>
+            <description>Represents the Service Assembly of CorrelationSampleComApp</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>CorrelationSampleComApp-CorrelationSample</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>CorrelationSample.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>CorrelationSampleComApp-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="casaPort1" service-name="ns1:CorrelationSampleComAppService1"/>
+                <provider endpoint-name="role1_myRole" service-name="ns2:Customer"/>
+            </connection>
+        </connections>
+    </service-assembly>
+</jbi>

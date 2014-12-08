@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Ileana%20Ontiveros/Documents/NetBeansProjects/CorrelationSampleComApp/src/jbiServiceUnits/CorrelationSampleComApp.wsdl" uri="src/conf/xml-resources/web-service-references/CorrelationSampleComApp/wsdl/CorrelationSampleComApp.wsdl"/>
+    <system systemId="file:/C:/Users/Ileana%20Ontiveros/Documents/NetBeansProjects/CorrelationSampleComApp/src/jbiServiceUnits/CorrelationSample/correlationSample.wsdl" uri="src/conf/xml-resources/web-service-references/CorrelationSampleComApp/jbiServiceUnits/CorrelationSample/correlationSample.wsdl"/>
+    <system systemId="file:/C:/Users/Ileana%20Ontiveros/Documents/NetBeansProjects/CorrelationSampleComApp/src/jbiServiceUnits/CorrelationSample/correlationSampleSchema.xsd" uri="src/conf/xml-resources/web-service-references/CorrelationSampleComApp/jbiServiceUnits/CorrelationSample/correlationSampleSchema.xsd"/>
+    <system systemId="http://localhost:8081/CorrelationSampleComAppService1/casaPort1?wsdl" uri="src/conf/xml-resources/web-service-references/casaPort1/wsdl/localhost_8081/CorrelationSampleComAppService1/casaPort1.wsdl"/>
+    <system systemId="http://Ile-PC:8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSample.wsdl" uri="src/conf/xml-resources/web-service-references/casaPort1/wsdl/Ile-PC_8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSample.wsdl"/>
+    <system systemId="http://Ile-PC:8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSampleSchema.xsd" uri="src/conf/xml-resources/web-service-references/casaPort1/wsdl/Ile-PC_8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSampleSchema.xsd"/>
+</catalog>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="correlationSample" targetNamespace="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample" xmlns:ns0="http://xml.netbeans.org/schema/correlationSampleSchema" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample">
+            <xsd:import namespace="http://xml.netbeans.org/schema/correlationSampleSchema" schemaLocation="correlationSampleSchema.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="initialisationRequest">
+        <part name="part1" element="ns0:initialisationRequest"/>
+    </message>
+    <message name="initialisationResponse">
+        <part name="part1" element="ns0:initialisationResponse"/>
+    </message>
+    <message name="addIntegerRequest">
+        <part name="part1" element="ns0:addIntegerRequest"/>
+    </message>
+    <message name="addIntegerResponse">
+        <part name="part1" element="ns0:addIntegerResponse"/>
+    </message>
+    <portType name="portType1">
+        <operation name="initialisation">
+            <input name="input1" message="tns:initialisationRequest"/>
+            <output name="output1" message="tns:initialisationResponse"/>
+        </operation>
+        <operation name="addInteger">
+            <input name="input2" message="tns:addIntegerRequest"/>
+            <output name="output2" message="tns:addIntegerResponse"/>
+        </operation>
+    </portType>
+    <plnk:partnerLinkType name="partnerlinktype1">
+        <plnk:role name="role1" portType="tns:portType1"/>
+    </plnk:partnerLinkType>
+    <vprop:property name="ClientID" type="xsd:string"/>
+    <vprop:propertyAlias propertyName="tns:ClientID" messageType="tns:initialisationRequest" part="part1">
+        <vprop:query>/ns0:initialisationRequest/ns0:name</vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:ClientID" messageType="tns:addIntegerRequest" part="part1">
+        <vprop:query>/ns0:addIntegerRequest/ns0:name</vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:ClientID" messageType="tns:initialisationResponse" part="part1">
+        <vprop:query>/ns0:initialisationResponse/ns0:instanceDescription</vprop:query>
+    </vprop:propertyAlias>
+</definitions>
