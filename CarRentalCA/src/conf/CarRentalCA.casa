@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://WS.BechCarRental/" xmlns:ns2="http://rentcar.hub.com/" xmlns:ns3="http://WS.KutzCarRental/" xmlns:ns4="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" xmlns:ns5="http://enterprise.netbeans.org/bpel/CarRentalBPEL/carRentalBPEL" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="BechCarRentalWSPort" interface-name="ns1:BechCarRentalWS" name="endpoint1" service-name="ns1:BechCarRentalWS"/>
+        <endpoint endpoint-name="HubServicePort" interface-name="ns2:HubService" name="endpoint2" service-name="ns2:HubService"/>
+        <endpoint endpoint-name="KutzCarRentalWSPort" interface-name="ns3:KutzCarRentalWS" name="endpoint3" service-name="ns3:KutzCarRentalWS"/>
+        <endpoint endpoint-name="CarRentalBPELPort" interface-name="ns4:CarRentalBPELPortType" name="endpoint4" service-name="ns4:CarRentalBPELService"/>
+        <endpoint display-name="CarRentalBPELPartnerLink" endpoint-name="CarRentalBPELPortTypeRole_myRole" file-path="carRentalBPEL.bpel" interface-name="ns4:CarRentalBPELPortType" name="endpoint5" process-name="carRentalBPEL" service-name="ns5:CarRentalBPELPartnerLink"/>
+        <endpoint display-name="BechRentalPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="carRentalBPEL.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint6" process-name="carRentalBPEL" service-name="ns5:BechRentalPartnerLink"/>
+        <endpoint display-name="KutzRentalPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="carRentalBPEL.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint7" process-name="carRentalBPEL" service-name="ns5:KutzRentalPartnerLink"/>
+        <endpoint display-name="HubServicePartnerLink" endpoint-name="HubServiceRole_partnerRole" file-path="carRentalBPEL.bpel" interface-name="ns2:HubService" name="endpoint8" process-name="carRentalBPEL" service-name="ns5:HubServicePartnerLink"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="CarRentalBPEL.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="CarRentalCA-CarRentalBPEL" unit-name="CarRentalBPEL" unknown="false" x="145" y="99">
+            <provides endpoint="endpoint5"/>
+            <consumes endpoint="endpoint6"/>
+            <consumes endpoint="endpoint7"/>
+            <consumes endpoint="endpoint8"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="CarRentalCA-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port x="67" y="276">
+                    <link xlink:href="../jbiServiceUnits/CarRentalBPEL/CarRentalBPEL.wsdl#xpointer(/definitions/service[@name='CarRentalBPELService']/port[@name='CarRentalBPELPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint4"/>
+                    <provides endpoint="endpoint4"/>
+                </port>
+                <port x="67" y="197">
+                    <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/service[@name='BechCarRentalWS']/port[@name='BechCarRentalWSPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port x="67" y="118">
+                    <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/HubService/HubService.wsdl#xpointer(/definitions/service[@name='HubService']/port[@name='HubServicePort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port x="67" y="39">
+                    <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl#xpointer(/definitions/service[@name='KutzCarRentalWS']/port[@name='KutzCarRentalWSPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint4" provider="endpoint5" state="unchanged"/>
+        <connection consumer="endpoint6" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint8" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint7" provider="endpoint3" state="unchanged"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/CarRentalBPEL.wsdl#xpointer(/definitions/portType[@name='CarRentalBPELPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/portType[@name='BechCarRentalWS'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/HubService/HubService.wsdl#xpointer(/definitions/portType[@name='HubService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl#xpointer(/definitions/portType[@name='KutzCarRentalWS'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/CarRentalBPEL.wsdl#xpointer(/definitions/binding[@name='CarRentalBPELBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/binding[@name='BechCarRentalWSPortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/HubService/HubService.wsdl#xpointer(/definitions/binding[@name='HubServicePortBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl#xpointer(/definitions/binding[@name='KutzCarRentalWSPortBinding'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/CarRentalBPEL.wsdl#xpointer(/definitions/service[@name='CarRentalBPELService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/service[@name='BechCarRentalWS'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/HubService/HubService.wsdl#xpointer(/definitions/service[@name='HubService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl#xpointer(/definitions/service[@name='KutzCarRentalWS'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>
