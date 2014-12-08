@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="CarRentalBPEL" targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" xmlns:ns0="http://WS.BechCarRental/" xmlns:ns="http://WS.KutzCarRental/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL">
+            <xsd:import namespace="http://WS.KutzCarRental/" schemaLocation="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?xsd=1"/>
+            <xsd:import namespace="http://WS.BechCarRental/" schemaLocation="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?xsd=1"/>
+        </xsd:schema>
+    </types>
+    <message name="InitOperationRequest">
+        <part name="part1" type="xsd:string"/>
+    </message>
+    <message name="InitOperationResponse">
+        <part name="kutzCars" type="ns:getCarsResponse"/>
+        <part name="bechCars" type="ns0:getCarsResponse"/>
+    </message>
+    <portType name="CarRentalBPELPortType">
+        <operation name="InitOperation">
+            <input name="input1" message="tns:InitOperationRequest"/>
+            <output name="output1" message="tns:InitOperationResponse"/>
+        </operation>
+    </portType>
+    <binding name="CarRentalBPELBinding" type="tns:CarRentalBPELPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="InitOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="CarRentalBPELService">
+        <port name="CarRentalBPELPort" binding="tns:CarRentalBPELBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/CarRentalBPELService/CarRentalBPELPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="CarRentalBPEL">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="CarRentalBPELPortTypeRole" portType="tns:CarRentalBPELPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
