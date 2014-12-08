@@ -1,0 +1,8 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cor="http://xml.netbeans.org/schema/correlationSampleSchema">
+  <soapenv:Body>
+    <cor:addIntegerRequest>
+      <cor:name>Izeth</cor:name>
+      <cor:valueToAdd>26</cor:valueToAdd>
+    </cor:addIntegerRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

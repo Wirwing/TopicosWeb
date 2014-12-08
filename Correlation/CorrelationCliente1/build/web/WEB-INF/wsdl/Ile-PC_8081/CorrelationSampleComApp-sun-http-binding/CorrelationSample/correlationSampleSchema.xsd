@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://xml.netbeans.org/schema/correlationSampleSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/correlationSampleSchema"
+    elementFormDefault="qualified">
+    <xsd:complexType name="initialisationRequestComplexType">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="addIntegerRequestComplexType">
+        <xsd:sequence>
+            <xsd:element name="name" type="xsd:string"></xsd:element>
+            <xsd:element name="valueToAdd" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="addIntegerResponseComplexType">
+        <xsd:sequence>
+            <xsd:element name="currentTotal" type="xsd:int"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="initialisationResponseComplexType">
+        <xsd:sequence>
+            <xsd:element name="instanceDescription" type="xsd:string"></xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="initialisationResponse" type="tns:initialisationResponseComplexType"></xsd:element>
+    <xsd:element name="initialisationRequest" type="tns:initialisationRequestComplexType"></xsd:element>
+    <xsd:element name="addIntegerRequest" type="tns:addIntegerRequestComplexType"></xsd:element>
+    <xsd:element name="addIntegerResponse" type="tns:addIntegerResponseComplexType"></xsd:element>
+</xsd:schema>

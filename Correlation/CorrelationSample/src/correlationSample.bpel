@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process
+    name="correlationSample"
+    targetNamespace="http://enterprise.netbeans.org/bpel/CorrelationSample/correlationSample"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/CorrelationSample/correlationSample"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
+    xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample" xmlns:sxxf="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/XPathFunctions" xmlns:ns1="http://xml.netbeans.org/schema/correlationSampleSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample" location="correlationSample.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="Customer" xmlns:tns="http://j2ee.netbeans.org/wsdl/CorrelationSample/src/correlationSample" partnerLinkType="tns:partnerlinktype1" myRole="role1"/>
+    </partnerLinks>
+    <variables>
+        <variable name="AddIntegerOut" messageType="ns0:addIntegerResponse"/>
+        <variable name="AddIntegerIn" messageType="ns0:addIntegerRequest"/>
+        <variable name="InitialisationOut" messageType="ns0:initialisationResponse"/>
+        <variable name="InitialisationIn" messageType="ns0:initialisationRequest"/>
+        <variable name="creationTime" type="xs:dateTime"/>
+        <variable name="total" type="xs:int"/>
+        <variable name="ContinueLoop" type="xs:boolean"/>
+    </variables>
+    <correlationSets>
+        <correlationSet name="CorrelationSet1" properties="ns0:ClientID"/>
+    </correlationSets>
+    <sequence>
+        <receive name="InitialisationReceive" createInstance="yes" partnerLink="Customer" operation="initialisation" portType="ns0:portType1" variable="InitialisationIn">
+            <correlations>
+                <correlation set="CorrelationSet1" initiate="yes"/>
+            </correlations>
+        </receive>
+        <assign name="GlobalVariablesAssign">
+            <copy>
+                <from>true()</from>
+                <to variable="ContinueLoop"/>
+            </copy>
+            <copy>
+                <from>sxxf:current-time()</from>
+                <to variable="creationTime"/>
+            </copy>
+            <copy>
+                <from>0</from>
+                <to variable="total"/>
+            </copy>
+        </assign>
+        <assign name="InitialisationResponseAssign">
+            <copy>
+                <from>concat('Hi ', $InitialisationIn.part1/ns1:name, ' our BPEL instance has been created at', $creationTime)</from>
+                <to>$InitialisationOut.part1/ns1:instanceDescription</to>
+            </copy>
+        </assign>
+        <reply name="InitialisationReply" partnerLink="Customer" operation="initialisation" portType="ns0:portType1" variable="InitialisationOut"></reply>
+        <while name="While1">
+            <condition>$ContinueLoop</condition>
+            <sequence name="Sequence1">
+                <receive name="AddIntegerReceive" createInstance="no" partnerLink="Customer" operation="addInteger" portType="ns0:portType1" variable="AddIntegerIn">
+                    <correlations>
+                        <correlation set="CorrelationSet1" initiate="no"/>
+                    </correlations>
+                </receive>
+                <if name="ContinueLoop">
+                    <condition>0 != $AddIntegerIn.part1/ns1:valueToAdd</condition>
+                    <sequence name="Sequence2">
+                        <assign name="AddIntegerAssign">
+                            <copy>
+                                <from>$total + $AddIntegerIn.part1/ns1:valueToAdd</from>
+                                <to variable="total"/>
+                            </copy>
+                            <copy>
+                                <from variable="total"/>
+                                <to>$AddIntegerOut.part1/ns1:currentTotal</to>
+                            </copy>
+                        </assign>
+                        <reply name="AddIntegerReply" partnerLink="Customer" operation="addInteger" portType="ns0:portType1" variable="AddIntegerOut"></reply>
+                    </sequence>
+                    <else>
+                        <assign name="ExitLoopAssign">
+                            <copy>
+                                <from>true()</from>
+                                <to variable="ContinueLoop"/>
+                            </copy>
+                        </assign>
+                    </else>
+                </if>
+            </sequence>
+        </while>
+    </sequence>
+</process>

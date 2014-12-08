@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8081/CorrelationSampleComAppService1/casaPort1?wsdl" uri="wsdl/localhost_8081/CorrelationSampleComAppService1/casaPort1.wsdl"/>
+    <system systemId="http://Ile-PC:8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSample.wsdl" uri="wsdl/Ile-PC_8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSample.wsdl"/>
+    <system systemId="http://Ile-PC:8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSampleSchema.xsd" uri="wsdl/Ile-PC_8081/CorrelationSampleComApp-sun-http-binding/CorrelationSample/correlationSampleSchema.xsd"/>
+</catalog>

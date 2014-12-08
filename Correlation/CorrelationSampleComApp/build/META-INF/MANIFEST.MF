@@ -1,0 +1,4 @@
+Bundle-Name: CorrelationSampleComApp
+Bundle-SymbolicName: CorrelationSampleComApp
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0
