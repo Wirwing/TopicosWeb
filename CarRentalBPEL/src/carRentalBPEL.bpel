@@ -23,6 +23,40 @@
         <partnerLink name="KutzRentalPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" partnerLinkType="tns:KutzCarRentalWSLinkType" partnerRole="KutzCarRentalWSRole"/>
         <partnerLink name="HubServicePartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/HubServiceWrapper" partnerLinkType="tns:HubServiceLinkType" partnerRole="HubServiceRole"/>
     </partnerLinks>
+    <variables>
+        <variable name="KutzGetCarsOut" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:getCarsResponse"/>
+        <variable name="KutzGetCarsIn" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:getCars"/>
+        <variable name="GetCarsOut" xmlns:tns="http://WS.BechCarRental/" messageType="tns:getCarsResponse"/>
+        <variable name="GetCarsIn" xmlns:tns="http://WS.BechCarRental/" messageType="tns:getCars"/>
+        <variable name="InitOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" messageType="tns:InitOperationResponse"/>
+        <variable name="InitOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" messageType="tns:InitOperationRequest"/>
+    </variables>
     <sequence>
-   </sequence>
+        <receive name="InitReceive" createInstance="yes" partnerLink="CarRentalBPELPartnerLink" operation="InitOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" portType="tns:CarRentalBPELPortType" variable="InitOperationIn"/>
+        <assign name="BechCarsAssignIn">
+            <copy>
+                <from>string()</from>
+                <to variable="GetCarsIn" part="parameters"/>
+            </copy>
+        </assign>
+        <invoke name="BechCarsInvoke" partnerLink="BechRentalPartnerLink" operation="getCars" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="GetCarsIn" outputVariable="GetCarsOut"/>
+        <assign name="KutzCarAssignIn">
+            <copy>
+                <from variable="GetCarsOut" part="parameters"/>
+                <to variable="InitOperationOut" part="bechCars"/>
+            </copy>
+            <copy>
+                <from>string()</from>
+                <to variable="KutzGetCarsIn" part="parameters"/>
+            </copy>
+        </assign>
+        <invoke name="KutzCarsInvoke" partnerLink="KutzRentalPartnerLink" operation="getCars" xmlns:tns="http://WS.KutzCarRental/" portType="tns:KutzCarRentalWS" inputVariable="KutzGetCarsIn" outputVariable="KutzGetCarsOut"/>
+        <assign name="KutzCarsAssignOut">
+            <copy>
+                <from variable="KutzGetCarsOut" part="parameters"/>
+                <to variable="InitOperationOut" part="kutzCars"/>
+            </copy>
+        </assign>
+        <reply name="InitReply" partnerLink="CarRentalBPELPartnerLink" operation="InitOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/CarRentalBPEL" portType="tns:CarRentalBPELPortType" variable="InitOperationOut"/>
+    </sequence>
 </process>
