@@ -10,7 +10,7 @@ package BechCarRental.Domain;
  */
 public class Reservation {
     
-    private static int countReservations = 0;
+    private static int countReservations = 1;
     
     int idReservation;
     String rentalDate;

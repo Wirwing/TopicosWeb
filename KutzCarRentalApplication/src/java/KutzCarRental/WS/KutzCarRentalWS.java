@@ -50,18 +50,33 @@ public class KutzCarRentalWS {
         @WebParam(name = "idCar") int idCar) throws ParseException {
         
         boolean isBooked = false;
+        Reservation reservation = new Reservation();
         try {
             Car car = DataBase.getDB().getCarById(idCar);
             double pricePerDay = car.getPricePerDay();
             int totalDays = new Utils().calculateDays(rentalDate, returnDate);
             double priceTotal = totalDays*pricePerDay;
-            Reservation reservation = new Reservation(rentalDate, returnDate, idCar, priceTotal);
+            reservation = new Reservation(rentalDate, returnDate, idCar, priceTotal);
             isBooked = DataBase.getDB().addReservation(reservation, idCar);
             return reservation;
         } catch (Exception e){
-            return null;
+            return reservation;
         } 
         
     }
-      
+
+    /**
+     * Obtener un auto por id
+     */
+    @WebMethod(operationName = "findCarById")
+    public Car findCarById(@WebParam(name = "idCar") int idCar) {
+        Car car = new Car();
+        try {
+            car = DataBase.getDB().getCarById(idCar);
+            return car;
+        } catch (Exception e){
+            return car;
+        } 
+    }
+        
 }
