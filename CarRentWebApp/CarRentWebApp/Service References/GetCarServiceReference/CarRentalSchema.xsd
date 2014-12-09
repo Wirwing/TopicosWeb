@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="http://xml.netbeans.org/schema/CarRentalSchema" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.netbeans.org/schema/CarRentalSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="RentRequestComplexType">
+    <xsd:sequence>
+      <xsd:element name="rentalDate" type="xsd:string" />
+      <xsd:element name="returnDate" type="xsd:string" />
+      <xsd:element name="idCar" type="xsd:int" />
+      <xsd:element name="userId" type="xsd:string" />
+      <xsd:element name="providerId" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CarComplexType">
+    <xsd:sequence>
+      <xsd:element name="id" type="xsd:int" />
+      <xsd:element name="type" type="xsd:string" />
+      <xsd:element name="brand" type="xsd:string" />
+      <xsd:element name="transmission" type="xsd:string" />
+      <xsd:element name="numberOfPeople" type="xsd:int" />
+      <xsd:element name="numberOfBaggage" type="xsd:int" />
+      <xsd:element name="pricePerDay" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="rentRequest" type="tns:RentRequestComplexType" />
+  <xsd:element name="carResponse" type="tns:CarComplexType" />
+</xsd:schema>

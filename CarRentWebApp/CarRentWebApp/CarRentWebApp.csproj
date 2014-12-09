@@ -114,12 +114,24 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Rent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CarServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GetCarServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RentCarServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -161,6 +173,31 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.CarComplexType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetCarServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\GetCarServiceReference\configuration.svcinfo" />
+    <None Include="Service References\GetCarServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\RentCarServiceReference\CarRentWebApp.RentCarServiceReference.addRegistryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\RentCarServiceReference\CarRentWebApp.RentCarServiceReference.output1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetCarServiceReference\CarRentalSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarServiceReference\GetCarWSDL.wsdl" />
+    <None Include="Service References\RentCarServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\RentCarServiceReference\configuration.svcinfo" />
+    <None Include="Service References\RentCarServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -183,9 +220,18 @@
     <None Include="Service References\CarServiceReference\KutzCarRentalWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RentCarServiceReference\CarRentalSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentCarServiceReference\HubService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentCarServiceReference\RentCarWSDL.wsdl" />
+    <Content Include="Views\Home\RentCar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Rent\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -199,6 +245,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CarServiceReference\" />
+    <WCFMetadataStorage Include="Service References\GetCarServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RentCarServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

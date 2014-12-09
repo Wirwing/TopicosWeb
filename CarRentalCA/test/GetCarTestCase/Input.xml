@@ -1,0 +1,8 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL">
+  <soapenv:Body>
+    <get:GetCarWSDLOperation>
+      <part1>1</part1>
+      <providerId>kutz</providerId>
+    </get:GetCarWSDLOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

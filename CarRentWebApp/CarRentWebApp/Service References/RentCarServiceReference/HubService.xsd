@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://rentcar.hub.com/" targetNamespace="http://rentcar.hub.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="addRegistry" type="tns:addRegistry" />
+  <xs:element name="addRegistryResponse" type="tns:addRegistryResponse" />
+  <xs:element name="getRegistry" type="tns:getRegistry" />
+  <xs:element name="getRegistryResponse" type="tns:getRegistryResponse" />
+  <xs:element name="getRentalProviders" type="tns:getRentalProviders" />
+  <xs:element name="getRentalProvidersResponse" type="tns:getRentalProvidersResponse" />
+  <xs:complexType name="getRegistry">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getRegistryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:carRentLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carRentLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookedDate" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="providerUUID" type="xs:string" />
+      <xs:element minOccurs="0" name="status" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getRentalProviders">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getRentalProvidersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rentalProvider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rentalProvider">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addRegistry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="providerUUID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addRegistryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:carRentLog" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

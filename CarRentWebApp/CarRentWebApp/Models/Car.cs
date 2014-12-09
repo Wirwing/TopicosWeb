@@ -7,9 +7,12 @@ namespace CarRentWebApp.Models
 {
     public class Car
     {
-        private String id;
+        private int id;
         private String name;
         private String provider;
+
+        private string transmission;
+        private double pricePerDay;
 
         public string Provider
         {
@@ -23,10 +26,22 @@ namespace CarRentWebApp.Models
             set { name = value; }
         }
 
-        public string Id
+        public int Id
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public string Transmission
+        {
+            get { return transmission; }
+            set { transmission = value; }
+        }
+
+        public double PricePerDay
+        {
+            get { return pricePerDay; }
+            set { pricePerDay = value; }
         }
     }
 }

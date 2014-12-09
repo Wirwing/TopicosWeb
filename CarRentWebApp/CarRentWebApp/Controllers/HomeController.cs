@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CarRentWebApp.CarServiceReference;
+using CarRentWebApp.GetCarServiceReference;
 using CarRentWebApp.Models;
+using CarRentWebApp.RentCarServiceReference;
 
 namespace CarRentWebApp.Controllers
 {
     public class HomeController : Controller
     {
 
-        private static List<Car> Cars = new List<Car>();
+        private static readonly List<Car> Cars = new List<Car>();
 
         public ActionResult Index()
         {
@@ -22,8 +25,8 @@ namespace CarRentWebApp.Controllers
             car1[] bechCars;
             var kutzCars = client.GetCarsWSDLOperation(out bechCars);
 
-            Cars.AddRange(bechCars.Select(bechCar => new Car() { Id = bechCar.id.ToString(), Name = bechCar.brand, Provider = "Bech" }));
-            Cars.AddRange(kutzCars.Select(kutzCar => new Car() { Id = kutzCar.id.ToString(), Name = kutzCar.brand, Provider = "Kutz" }));
+            Cars.AddRange(bechCars.Select(bechCar => new Car() { Id = bechCar.id, Name = bechCar.brand, Provider = "bech" }));
+            Cars.AddRange(kutzCars.Select(kutzCar => new Car() { Id = kutzCar.id, Name = kutzCar.brand, Provider = "kutz" }));
 
             return View(Cars);
 
@@ -43,11 +46,20 @@ namespace CarRentWebApp.Controllers
         }
 
 
-        public ActionResult RentCar(string id, string provider)
+        public ActionResult RentCar(int? id, string provider)
         {
-            var found = Cars.Find(car => car.Id.Equals(id) && car.Provider.Equals(provider));
-            Debug.WriteLine("Car GET: " + found.Name + ","  + found.Provider);
-            return RedirectToAction("Index");
+
+            if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            var client = new GetCarWSDLPortTypeClient();
+
+            var carWsResponse = client.GetCarWSDLOperation(id.GetValueOrDefault(1), provider);
+
+            var car = new Car(){ Id = carWsResponse.id, Name = carWsResponse.brand, PricePerDay = carWsResponse.pricePerDay, Provider = provider, Transmission = carWsResponse.transmission};
+
+            var rent = new Rent {Car = car};
+
+            return View(rent);
         }
 
     }
