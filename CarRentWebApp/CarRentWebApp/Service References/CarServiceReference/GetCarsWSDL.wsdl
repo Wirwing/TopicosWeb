@@ -37,7 +37,7 @@ A partner link type characterizes the conversational relationship between two se
   </wsdl:binding>
   <wsdl:service name="GetCarsWSDLService">
     <wsdl:port name="GetCarsWSDLPort" binding="tns:GetCarsWSDLBinding">
-      <soap:address location="http://192.168.1.77:9080/GetCarsWSDLService/GetCarsWSDLPort" />
+      <soap:address location="http://Office-Depot:9080/GetCarsWSDLService/GetCarsWSDLPort" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

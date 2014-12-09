@@ -27,7 +27,6 @@
       <xs:element minOccurs="0" name="idReservation" type="xs:string" />
       <xs:element minOccurs="0" name="rentalDate" type="xs:string" />
       <xs:element minOccurs="0" name="returnDate" type="xs:string" />
-      <xs:element minOccurs="0" name="status" type="xs:string" />
       <xs:element name="totalPrice" type="xs:double" />
     </xs:sequence>
   </xs:complexType>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZIbXR+XtAIX4z2g7n7/FAbVpDvo=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="nmI0cf1sSqLH6Vu77GMYDIoR4U8=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="GetCarsWSDLBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GetCarsWSDLPort" contract="CarServiceReference.GetCarsWSDLPortType" bindingType="basicHttpBinding" address="http://192.168.1.77:9080/GetCarsWSDLService/GetCarsWSDLPort" bindingConfiguration="GetCarsWSDLBinding">
+    <endpoint name="GetCarsWSDLPort" contract="CarServiceReference.GetCarsWSDLPortType" bindingType="basicHttpBinding" address="http://office-depot:9080/GetCarsWSDLService/GetCarsWSDLPort" bindingConfiguration="GetCarsWSDLBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://192.168.1.77:9080/GetCarsWSDLService/GetCarsWSDLPort</serializedValue>
+          <serializedValue>http://Office-Depot:9080/GetCarsWSDLService/GetCarsWSDLPort</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

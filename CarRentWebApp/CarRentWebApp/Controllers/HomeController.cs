@@ -11,21 +11,22 @@ namespace CarRentWebApp.Controllers
 {
     public class HomeController : Controller
     {
+
+        private static List<Car> Cars = new List<Car>();
+
         public ActionResult Index()
         {
+            if (Cars.Count != 0) return View(Cars);
 
-            //var client = new GetCarsWSDLPortTypeClient();
-            
-            //car1[] bechCars;
-            //var kutzCars = client.GetCarsWSDLOperation(out bechCars);
+            var client = new GetCarsWSDLPortTypeClient();
+            car1[] bechCars;
+            var kutzCars = client.GetCarsWSDLOperation(out bechCars);
 
-            List<Car> cars = new List<Car>();
+            Cars.AddRange(bechCars.Select(bechCar => new Car() { Id = bechCar.id.ToString(), Name = bechCar.brand, Provider = "Bech" }));
+            Cars.AddRange(kutzCars.Select(kutzCar => new Car() { Id = kutzCar.id.ToString(), Name = kutzCar.brand, Provider = "Kutz" }));
 
-            cars.Add(new Car(){ Id = "1", Name = "Dodge", Provider = "Bech"});
-            cars.Add(new Car() { Id = "2", Name = "Ferrari", Provider = "Bech" });
-            cars.Add(new Car() { Id = "3", Name = "Jaguar", Provider = "Bech" });
+            return View(Cars);
 
-            return View(cars);
         }
 
         public ActionResult About()
@@ -38,24 +39,14 @@ namespace CarRentWebApp.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
 
-        public ActionResult Delete(int? id)
+        public ActionResult RentCar(string id, string provider)
         {
-            Debug.WriteLine("Car GET: " + id);
-            return RedirectToAction("Index");
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
-        {
-            
-            Debug.WriteLine("Car: " + id);
-
+            var found = Cars.Find(car => car.Id.Equals(id) && car.Provider.Equals(provider));
+            Debug.WriteLine("Car GET: " + found.Name + ","  + found.Provider);
             return RedirectToAction("Index");
         }
 
