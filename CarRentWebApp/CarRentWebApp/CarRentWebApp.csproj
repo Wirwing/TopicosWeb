@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\GetCarsServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -157,6 +162,21 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\GetCarsServiceReference\CarRentWebApp.GetCarsServiceReference.car.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetCarsServiceReference\CarRentWebApp.GetCarsServiceReference.car1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetCarsServiceReference\CarRentWebApp.GetCarsServiceReference.output1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GetCarsServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\GetCarsServiceReference\configuration.svcinfo" />
+    <None Include="Service References\GetCarsServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -178,6 +198,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\GetCarServiceReference\GetCarWSDL.wsdl" />
+    <None Include="Service References\GetCarsServiceReference\BechCarRentalWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarsServiceReference\GetCarsWSDL.wsdl" />
+    <None Include="Service References\GetCarsServiceReference\KutzCarRentalWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -194,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\GetCarServiceReference\" />
+    <WCFMetadataStorage Include="Service References\GetCarsServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

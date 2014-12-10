@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f92a9ce2-8558-4c8f-b710-12668e9829a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9080/GetCarsWSDLService/GetCarsWSDLPort?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GetCarsWSDL.wsdl" MetadataType="Wsdl" ID="5f6e396c-be8f-4e7a-bc55-44f5e7a70053" SourceId="1" SourceUrl="http://localhost:9080/GetCarsWSDLService/GetCarsWSDLPort?wsdl" />
+    <MetadataFile FileName="KutzCarRentalWS.xsd" MetadataType="Schema" ID="05bccb4d-f5c1-423a-9302-0c36574847c6" SourceId="1" SourceUrl="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.xsd_1.xsd" />
+    <MetadataFile FileName="BechCarRentalWS.xsd" MetadataType="Schema" ID="b5b36a15-d14b-4b37-8b23-dcc4cc380e10" SourceId="1" SourceUrl="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/BechCarRentalWS/BechCarRentalWS.xsd_1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
