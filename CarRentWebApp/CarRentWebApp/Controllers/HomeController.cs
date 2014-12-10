@@ -5,10 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using CarRentWebApp.CarServiceReference;
 using CarRentWebApp.GetCarServiceReference;
 using CarRentWebApp.Models;
-using CarRentWebApp.RentCarServiceReference;
 
 namespace CarRentWebApp.Controllers
 {
@@ -19,6 +17,19 @@ namespace CarRentWebApp.Controllers
 
         public ActionResult Index()
         {
+
+            var client = new GetCarWSDLPortTypeClient();
+
+            var carWsResponse = client.GetCarWSDLOperation(2, "kutz");
+            Debug.WriteLine(carWsResponse.brand);
+
+
+            /*
+            var client = new GetCarWSDLPortTypeClient();
+
+            
+            /*
+            /*
             if (Cars.Count != 0) return View(Cars);
 
             var client = new GetCarsWSDLPortTypeClient();
@@ -27,9 +38,11 @@ namespace CarRentWebApp.Controllers
 
             Cars.AddRange(bechCars.Select(bechCar => new Car() { Id = bechCar.id, Name = bechCar.brand, Provider = "bech" }));
             Cars.AddRange(kutzCars.Select(kutzCar => new Car() { Id = kutzCar.id, Name = kutzCar.brand, Provider = "kutz" }));
-
+            
             return View(Cars);
 
+            */
+            return View();
         }
 
         public ActionResult About()
@@ -48,7 +61,7 @@ namespace CarRentWebApp.Controllers
 
         public ActionResult RentCar(int? id, string provider)
         {
-
+            /*
             if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
             var client = new GetCarWSDLPortTypeClient();
@@ -72,8 +85,9 @@ namespace CarRentWebApp.Controllers
             {
                 return View();   
             }
-
+            */
+            return View();
         }
-
+            
     }
 }

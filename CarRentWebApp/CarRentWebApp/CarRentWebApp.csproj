@@ -121,22 +121,7 @@
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Rent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\CarServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\GetBookedServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Service References\GetCarServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\RentCarServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -163,62 +148,12 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\CarServiceReference\CarRentWebApp.CarServiceReference.car.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\CarServiceReference\CarRentWebApp.CarServiceReference.car1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\CarServiceReference\CarRentWebApp.CarServiceReference.output1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\CarServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\CarServiceReference\configuration.svcinfo" />
-    <None Include="Service References\CarServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\GetBookedServiceReference\CarRentWebApp.GetBookedServiceReference.carRentLog.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\GetBookedServiceReference\CarRentWebApp.GetBookedServiceReference.output1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\GetBookedServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\GetBookedServiceReference\configuration.svcinfo" />
-    <None Include="Service References\GetBookedServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\GetBookedServiceReference\GetBookedRentsWSDL.wsdl" />
-    <None Include="Service References\GetBookedServiceReference\HubService.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.CarComplexType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.output1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\GetCarServiceReference\configuration91.svcinfo" />
     <None Include="Service References\GetCarServiceReference\configuration.svcinfo" />
     <None Include="Service References\GetCarServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Service References\RentCarServiceReference\CarRentWebApp.RentCarServiceReference.addRegistryResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\RentCarServiceReference\CarRentWebApp.RentCarServiceReference.output1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\GetCarServiceReference\CarRentalSchema.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\GetCarServiceReference\GetCarWSDL.wsdl" />
-    <None Include="Service References\RentCarServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\RentCarServiceReference\configuration.svcinfo" />
-    <None Include="Service References\RentCarServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -237,22 +172,12 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <None Include="Service References\CarServiceReference\BechCarRentalWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CarServiceReference\GetCarsWSDL.wsdl" />
-    <None Include="Service References\CarServiceReference\KutzCarRentalWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RentCarServiceReference\CarRentalSchema.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RentCarServiceReference\HubService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\RentCarServiceReference\RentCarWSDL.wsdl" />
     <Content Include="Views\Home\RentCar.cshtml" />
     <Content Include="Views\Rent\Index.cshtml" />
+    <None Include="Service References\GetCarServiceReference\CarRentalSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GetCarServiceReference\GetCarWSDL.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -268,10 +193,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\CarServiceReference\" />
-    <WCFMetadataStorage Include="Service References\GetBookedServiceReference\" />
     <WCFMetadataStorage Include="Service References\GetCarServiceReference\" />
-    <WCFMetadataStorage Include="Service References\RentCarServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
