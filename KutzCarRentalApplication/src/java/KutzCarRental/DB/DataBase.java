@@ -7,6 +7,7 @@ package KutzCarRental.DB;
 import KutzCarRental.Domain.Car;
 import KutzCarRental.Domain.Reservation;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -72,6 +73,15 @@ public class DataBase {
 
     public ArrayList<Reservation> getReservationsTable() {
         return reservationsTable;
+    }
+    
+    public Reservation getReservationById(final String reservationId) {
+        List<Reservation> reservations = getReservationsTable();
+        for(int i = 0; i < reservations.size(); i++ ){
+            if(reservations.get(i).getIdReservation().equalsIgnoreCase(reservationId))
+                return reservations.get(i);
+        }
+        return null;
     }
     
 }

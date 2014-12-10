@@ -6,9 +6,8 @@ package BechCarRental.DB;
 
 import BechCarRental.Domain.Car;
 import BechCarRental.Domain.Reservation;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -77,12 +76,12 @@ public class DataBase {
     }
     
     public Reservation getReservationById(final String reservationId) {
-        Reservation reservation = Iterables.find(getReservationsTable(), new Predicate<Reservation>() {
-            public boolean apply(Reservation reservation) {
-                return reservation.getIdReservation().compareToIgnoreCase(reservationId) == 0;
-            }
-        });
-        return reservation;
+        List<Reservation> reservations = getReservationsTable();
+        for(int i = 0; i < reservations.size(); i++ ){
+            if(reservations.get(i).getIdReservation().equalsIgnoreCase(reservationId))
+                return reservations.get(i);
+        }
+        return null;
     }
     
 }

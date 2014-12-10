@@ -65,6 +65,12 @@ public class KutzCarRentalWS {
         
     }
 
+    @WebMethod(operationName = "getReservation")
+    public Reservation getReservation(String reservationId) throws ParseException {
+        Reservation reservation = DataBase.getDB().getReservationById(reservationId);
+        return reservation;
+    }
+    
     /**
      * Obtener un auto por id
      */

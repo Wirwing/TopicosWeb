@@ -12,8 +12,6 @@ import javax.ejb.Stateless;
 import BechCarRental.Domain.Car;
 import BechCarRental.Domain.Reservation;
 import BechCarRental.Utils.Utils;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
 import java.text.ParseException;
 import java.util.ArrayList;
 
@@ -72,7 +70,7 @@ public class BechCarRentalWS {
         Reservation reservation = DataBase.getDB().getReservationById(reservationId);
         return reservation;
     }
-
+    
     /**
      * Obtener un auto por id
      */
