@@ -19,14 +19,15 @@ namespace CarRentWebApp.Controllers
             var bookedRents = client.GetBookedRentsWSDLOperation("");
 
             var rents = new List<Rent>();
-
+            
+            /*
             foreach (var bookedRent in bookedRents)
             {
                 rents.Add(new Rent()
                 {
                     EndDate = bookedRent.
                 });
-            }
+            }*/
 
             return View();
         }

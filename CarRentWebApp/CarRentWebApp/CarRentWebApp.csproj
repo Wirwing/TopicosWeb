@@ -190,13 +190,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.CarComplexType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Service References\GetBookedServiceReference\GetBookedRentsWSDL.wsdl" />
     <None Include="Service References\GetBookedServiceReference\HubService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.CarComplexType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GetCarServiceReference\CarRentWebApp.GetCarServiceReference.output1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\GetCarServiceReference\configuration91.svcinfo" />
     <None Include="Service References\GetCarServiceReference\configuration.svcinfo" />
     <None Include="Service References\GetCarServiceReference\Reference.svcmap">

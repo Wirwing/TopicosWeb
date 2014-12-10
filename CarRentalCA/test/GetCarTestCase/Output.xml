@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
   <SOAP-ENV:Body>
     <m:GetCarWSDLOperationResponse xmlns:m="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL">
-      <part1>
+      <getCarResponse>
         <carResponse xmlns="http://xml.netbeans.org/schema/CarRentalSchema">
           <id xmlns="">1</id>
           <type xmlns="">Automóvil</type>
@@ -12,9 +12,9 @@
           <transmission xmlns="">Manual</transmission>
           <numberOfPeople xmlns="">5</numberOfPeople>
           <numberOfBaggage xmlns="">1</numberOfBaggage>
-          <pricePerDay xmlns="">318.0</pricePerDay>
+          <pricePerDay xmlns="">310.0</pricePerDay>
         </carResponse>
-      </part1>
+      </getCarResponse>
     </m:GetCarWSDLOperationResponse>
   </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>

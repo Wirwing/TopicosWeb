@@ -52,14 +52,27 @@ namespace CarRentWebApp.Controllers
             if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
             var client = new GetCarWSDLPortTypeClient();
+            var carWsResponse = client.GetCarWSDLOperation(2, "kutz");
 
-            var carWsResponse = client.GetCarWSDLOperation(id.GetValueOrDefault(1), provider);
 
-            var car = new Car(){ Id = carWsResponse.id, Name = carWsResponse.brand, PricePerDay = carWsResponse.pricePerDay, Provider = provider, Transmission = carWsResponse.transmission};
+            if (carWsResponse != null)
+            {
+                var car = new Car()
+                {
+                    Id = carWsResponse.id,
+                    Name = carWsResponse.brand,
+                    PricePerDay = carWsResponse.pricePerDay,
+                    Provider = provider,
+                    Transmission = carWsResponse.transmission
+                };
+                var rent = new Rent {Car = car};
+                return View(rent);
+            }
+            else
+            {
+                return View();   
+            }
 
-            var rent = new Rent {Car = car};
-
-            return View(rent);
         }
 
     }

@@ -16,6 +16,12 @@
 <message name="findCarByIdResponse">
 <part name="parameters" element="tns:findCarByIdResponse"/>
 </message>
+<message name="getReservation">
+<part name="parameters" element="tns:getReservation"/>
+</message>
+<message name="getReservationResponse">
+<part name="parameters" element="tns:getReservationResponse"/>
+</message>
 <message name="getReservations">
 <part name="parameters" element="tns:getReservations"/>
 </message>

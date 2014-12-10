@@ -12,7 +12,7 @@ A partner link type characterizes the conversational relationship between two se
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="GetCarWSDLOperationResponse">
-    <wsdl:part name="part1" type="ns:CarComplexType" />
+    <wsdl:part name="getCarResponse" element="ns:carResponse" />
   </wsdl:message>
   <wsdl:message name="GetCarWSDLOperationRequest">
     <wsdl:part name="getCarId" type="xsd:int" />

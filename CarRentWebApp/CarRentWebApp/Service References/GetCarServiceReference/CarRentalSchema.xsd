@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:tns="http://xml.netbeans.org/schema/CarRentalSchema" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.netbeans.org/schema/CarRentalSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns:tns="http://xml.netbeans.org/schema/CarRentalSchema" xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://xml.netbeans.org/schema/CarRentalSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:complexType name="RentRequestComplexType">
     <xsd:sequence>
       <xsd:element name="rentalDate" type="xsd:string" />

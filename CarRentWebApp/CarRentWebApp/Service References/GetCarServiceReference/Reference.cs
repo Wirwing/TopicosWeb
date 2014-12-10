@@ -15,14 +15,14 @@ namespace CarRentWebApp.GetCarServiceReference {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", ConfigurationName="GetCarServiceReference.GetCarWSDLPortType")]
     public interface GetCarWSDLPortType {
         
+        // CODEGEN: Generating message contract since message part namespace (http://xml.netbeans.org/schema/CarRentalSchema) does not match the default value ()
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="part1")]
-        CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int getCarId, string getCarProviderId);
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="carResponse")]
+        CarRentWebApp.GetCarServiceReference.output1 GetCarWSDLOperation(CarRentWebApp.GetCarServiceReference.input1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="part1")]
-        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.CarComplexType> GetCarWSDLOperationAsync(int getCarId, string getCarProviderId);
+        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> GetCarWSDLOperationAsync(CarRentWebApp.GetCarServiceReference.input1 request);
     }
     
     /// <remarks/>
@@ -141,6 +141,45 @@ namespace CarRentWebApp.GetCarServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarWSDLOperation", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", IsWrapped=true)]
+    public partial class input1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public int getCarId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public string getCarProviderId;
+        
+        public input1() {
+        }
+        
+        public input1(int getCarId, string getCarProviderId) {
+            this.getCarId = getCarId;
+            this.getCarProviderId = getCarProviderId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarWSDLOperationResponse", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", IsWrapped=true)]
+    public partial class output1 {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema")]
+        public CarRentWebApp.GetCarServiceReference.CarComplexType carResponse;
+        
+        public output1() {
+        }
+        
+        public output1(CarRentWebApp.GetCarServiceReference.CarComplexType carResponse) {
+            this.carResponse = carResponse;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GetCarWSDLPortTypeChannel : CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType, System.ServiceModel.IClientChannel {
     }
@@ -168,12 +207,29 @@ namespace CarRentWebApp.GetCarServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int getCarId, string getCarProviderId) {
-            return base.Channel.GetCarWSDLOperation(getCarId, getCarProviderId);
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        CarRentWebApp.GetCarServiceReference.output1 CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType.GetCarWSDLOperation(CarRentWebApp.GetCarServiceReference.input1 request) {
+            return base.Channel.GetCarWSDLOperation(request);
         }
         
-        public System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.CarComplexType> GetCarWSDLOperationAsync(int getCarId, string getCarProviderId) {
-            return base.Channel.GetCarWSDLOperationAsync(getCarId, getCarProviderId);
+        public CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int getCarId, string getCarProviderId) {
+            CarRentWebApp.GetCarServiceReference.input1 inValue = new CarRentWebApp.GetCarServiceReference.input1();
+            inValue.getCarId = getCarId;
+            inValue.getCarProviderId = getCarProviderId;
+            CarRentWebApp.GetCarServiceReference.output1 retVal = ((CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType)(this)).GetCarWSDLOperation(inValue);
+            return retVal.carResponse;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType.GetCarWSDLOperationAsync(CarRentWebApp.GetCarServiceReference.input1 request) {
+            return base.Channel.GetCarWSDLOperationAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> GetCarWSDLOperationAsync(int getCarId, string getCarProviderId) {
+            CarRentWebApp.GetCarServiceReference.input1 inValue = new CarRentWebApp.GetCarServiceReference.input1();
+            inValue.getCarId = getCarId;
+            inValue.getCarProviderId = getCarProviderId;
+            return ((CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType)(this)).GetCarWSDLOperationAsync(inValue);
         }
     }
 }

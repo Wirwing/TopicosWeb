@@ -18,6 +18,10 @@
 
 <xs:element name="getReservationsResponse" type="tns:getReservationsResponse"/>
 
+<xs:element name="getReservation" type="tns:getReservation"/>
+
+<xs:element name="getReservationResponse" type="tns:getReservationResponse"/>
+
 <xs:complexType name="createReservation">
 <xs:sequence>
 <xs:element name="rentalDate" type="xs:string" minOccurs="0"/>
@@ -46,6 +50,17 @@
 <xs:sequence>
 <xs:element name="errorOffset" type="xs:int"/>
 <xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getReservation">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getReservationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:reservation" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

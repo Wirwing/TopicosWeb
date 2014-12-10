@@ -7,6 +7,8 @@
   <xs:element name="findCarByIdResponse" type="tns:findCarByIdResponse" />
   <xs:element name="getCars" type="tns:getCars" />
   <xs:element name="getCarsResponse" type="tns:getCarsResponse" />
+  <xs:element name="getReservation" type="tns:getReservation" />
+  <xs:element name="getReservationResponse" type="tns:getReservationResponse" />
   <xs:element name="getReservations" type="tns:getReservations" />
   <xs:element name="getReservationsResponse" type="tns:getReservationsResponse" />
   <xs:complexType name="createReservation">
@@ -72,6 +74,16 @@
   <xs:complexType name="findCarByIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:car" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getReservationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:reservation" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

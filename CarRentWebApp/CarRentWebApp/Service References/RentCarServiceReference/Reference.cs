@@ -122,6 +122,8 @@ namespace CarRentWebApp.RentCarServiceReference {
         
         private string bookedDateField;
         
+        private string brandNameField;
+        
         private string idField;
         
         private string providerUUIDField;
@@ -144,6 +146,18 @@ namespace CarRentWebApp.RentCarServiceReference {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string brandName {
+            get {
+                return this.brandNameField;
+            }
+            set {
+                this.brandNameField = value;
+                this.RaisePropertyChanged("brandName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string id {
             get {
                 return this.idField;
@@ -155,7 +169,7 @@ namespace CarRentWebApp.RentCarServiceReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public string providerUUID {
             get {
                 return this.providerUUIDField;
@@ -167,7 +181,7 @@ namespace CarRentWebApp.RentCarServiceReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string status {
             get {
                 return this.statusField;
@@ -179,7 +193,7 @@ namespace CarRentWebApp.RentCarServiceReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string userId {
             get {
                 return this.userIdField;

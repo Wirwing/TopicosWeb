@@ -3,6 +3,7 @@
 <xsd:schema 
     xmlns="http://www.w3.org/2001/XMLSchema"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="unqualified"
     xmlns:tns="http://xml.netbeans.org/schema/CarRentalSchema"
     targetNamespace="http://xml.netbeans.org/schema/CarRentalSchema">
 
@@ -19,12 +20,12 @@
     <xsd:complexType name="CarComplexType">
         <xsd:sequence>
             <xsd:element name="id" type="xsd:int"></xsd:element>
-                <xsd:element name="type" type="xsd:string"></xsd:element>
-                <xsd:element name="brand" type="xsd:string"></xsd:element>
-                <xsd:element name="transmission" type="xsd:string"></xsd:element>
-                <xsd:element name="numberOfPeople" type="xsd:int"></xsd:element>
-                <xsd:element name="numberOfBaggage" type="xsd:int"></xsd:element>
-                <xsd:element name="pricePerDay" type="xsd:double"></xsd:element>
+            <xsd:element name="type" type="xsd:string"></xsd:element>
+            <xsd:element name="brand" type="xsd:string"></xsd:element>
+            <xsd:element name="transmission" type="xsd:string"></xsd:element>
+            <xsd:element name="numberOfPeople" type="xsd:int"></xsd:element>
+            <xsd:element name="numberOfBaggage" type="xsd:int"></xsd:element>
+            <xsd:element name="pricePerDay" type="xsd:double"></xsd:element>
         </xsd:sequence>
     </xsd:complexType>
     
