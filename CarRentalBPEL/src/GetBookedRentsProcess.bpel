@@ -28,7 +28,7 @@
         <assign name="Assign1">
             <copy>
                 <from>string()</from>
-                <to variable="GetBookedRentsOperationOut" part="booked"/>
+                <to variable="GetRegistryIn" part="parameters"/>
             </copy>
         </assign>
         <invoke name="HubInvoke" partnerLink="HubPartnerLink" operation="getRegistry" xmlns:tns="http://rentcar.hub.com/" portType="tns:HubService" inputVariable="GetRegistryIn" outputVariable="GetRegistryOut"/>

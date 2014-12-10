@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns="http://rentcar.hub.com/" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" name="GetBookedRents" targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <plnk:partnerLinkType name="GetBookedRents">
+    <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+    <plnk:role name="GetBookedRentsPortTypeRole" portType="tns:GetBookedRentsPortType" />
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents">
+      <xsd:import schemaLocation="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" namespace="http://rentcar.hub.com/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBookedRentsOperationResponse">
+    <wsdl:part name="booked" type="ns:getRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookedRentsOperationRequest" />
+  <wsdl:portType name="GetBookedRentsPortType">
+    <wsdl:operation name="GetBookedRentsOperation">
+      <wsdl:input name="input1" message="tns:GetBookedRentsOperationRequest" />
+      <wsdl:output name="output1" message="tns:GetBookedRentsOperationResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetBookedRentsBinding" type="tns:GetBookedRentsPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="GetBookedRentsOperation">
+      <soap:operation soapAction="" />
+      <wsdl:input name="input1">
+        <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" />
+      </wsdl:input>
+      <wsdl:output name="output1">
+        <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetBookedRentsService">
+    <wsdl:port name="GetBookedRentsPort" binding="tns:GetBookedRentsBinding">
+      <soap:address location="http://192.168.1.77:9080/GetBookedRentsService/GetBookedRentsPort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

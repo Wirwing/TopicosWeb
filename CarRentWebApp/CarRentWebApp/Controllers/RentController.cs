@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CarRentWebApp.GetBookedServiceReference;
 using CarRentWebApp.Models;
 
 namespace CarRentWebApp.Controllers
@@ -13,22 +14,16 @@ namespace CarRentWebApp.Controllers
         public ActionResult Index()
         {
 
-            /*
-            var client = new GetBookedRentsWSDLPortTypeClient();
+            var client = new GetBookedRentsPortTypeClient();
 
-            var bookedRents = client.GetBookedRentsWSDLOperation("");
+            var bookedRents = client.GetBookedRentsOperation();
 
-            var rents = new List<Rent>();
-            
-            foreach (var bookedRent in bookedRents)
+            var rents = bookedRents.Select(bookedRent => new BookedRent()
             {
-                rents.Add(new Rent()
-                {
-                    EndDate = bookedRent.
-                });
-            }*/
+                Uuid = bookedRent.id, BookedDate = bookedRent.bookedDate, Status = bookedRent.status
+            }).ToList();
 
-            return View();
+            return View(rents);
         }
     }
 }

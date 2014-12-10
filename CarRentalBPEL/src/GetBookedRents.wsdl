@@ -10,7 +10,7 @@
     </types>
     <message name="GetBookedRentsOperationRequest"/>
     <message name="GetBookedRentsOperationResponse">
-        <part name="booked" type="ns:getRentalProviders"/>
+        <part name="booked" type="ns:getRegistryResponse"/>
     </message>
     <portType name="GetBookedRentsPortType">
         <operation name="GetBookedRentsOperation">

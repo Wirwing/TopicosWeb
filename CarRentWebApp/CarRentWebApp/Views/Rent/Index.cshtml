@@ -1,10 +1,23 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿@model System.Collections.Generic.List<CarRentWebApp.Models.BookedRent>
 
-@model System.Collections.Generic.List<CarRentWebApp.Models.Rent>
+<h3>Log de rentas</h3>
 
-<div>
-    Ola ke ase
-</div>
+<br />
 
+<div class="col-md-12">
+        <table class="table">
+            <tr>
+                <th>Identificador</th>
+                <th>Fecha de Transacción</th>
+                <th>Estado de la operación</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Uuid</td>
+                    <td>@item.BookedDate</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+        </table>
+    </div>
