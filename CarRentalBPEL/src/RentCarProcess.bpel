@@ -37,32 +37,32 @@
         <receive name="RentCarReceive" createInstance="yes" partnerLink="RentCarPartnerLink" operation="RentCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" portType="tns:RentCarWSDLPortType" variable="RentCarWSDLOperationIn"/>
         <assign name="Assign3">
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:rentalDate</from>
+                <from variable="RentCarWSDLOperationIn" part="rentalDate"/>
                 <to>$KutzCreateReservationIn.parameters/rentalDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:rentalDate</from>
+                <from variable="RentCarWSDLOperationIn" part="rentalDate"/>
                 <to>$BechCreateReservationIn.parameters/rentalDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:returnDate</from>
+                <from variable="RentCarWSDLOperationIn" part="returnDate"/>
                 <to>$KutzCreateReservationIn.parameters/returnDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:returnDate</from>
+                <from variable="RentCarWSDLOperationIn" part="returnDate"/>
                 <to>$BechCreateReservationIn.parameters/returnDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:idCar</from>
+                <from variable="RentCarWSDLOperationIn" part="idCar"/>
                 <to>$KutzCreateReservationIn.parameters/idCar</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.rentInput/ns0:idCar</from>
+                <from variable="RentCarWSDLOperationIn" part="idCar"/>
                 <to>$BechCreateReservationIn.parameters/idCar</to>
             </copy>
         </assign>
         <if name="If1">
-            <condition>contains('bech', $RentCarWSDLOperationIn.rentInput/ns0:providerId)</condition>
+            <condition>contains('bech', $RentCarWSDLOperationIn.providerId)</condition>
             <sequence name="Sequence1">
                 <invoke name="BechInvoke" partnerLink="BechPartnerLink" operation="createReservation" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="BechCreateReservationIn" outputVariable="BechCreateReservationOut"/>
                 <assign name="Assign1">
@@ -71,11 +71,11 @@
                         <to>$AddRegistryIn.parameters/id</to>
                     </copy>
                     <copy>
-                        <from>$RentCarWSDLOperationIn.rentInput/ns0:userId</from>
+                        <from variable="RentCarWSDLOperationIn" part="userId"/>
                         <to>$AddRegistryIn.parameters/userId</to>
                     </copy>
                     <copy>
-                        <from>$RentCarWSDLOperationIn.rentInput/ns0:providerId</from>
+                        <from variable="RentCarWSDLOperationIn" part="providerId"/>
                         <to>$AddRegistryIn.parameters/providerUUID</to>
                     </copy>
                 </assign>
@@ -89,11 +89,11 @@
                             <to>$AddRegistryIn.parameters/id</to>
                         </copy>
                         <copy>
-                            <from>$RentCarWSDLOperationIn.rentInput/ns0:providerId</from>
+                            <from variable="RentCarWSDLOperationIn" part="providerId"/>
                             <to>$AddRegistryIn.parameters/providerUUID</to>
                         </copy>
                         <copy>
-                            <from>$RentCarWSDLOperationIn.rentInput/ns0:userId</from>
+                            <from variable="RentCarWSDLOperationIn" part="userId"/>
                             <to>$AddRegistryIn.parameters/userId</to>
                         </copy>
                     </assign>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc852f1c-43f8-4039-99f0-2e7fd5ab5d56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9080/RentCarWSDLService/RentCarWSDLPort?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RentCarWSDL.wsdl" MetadataType="Wsdl" ID="2bd2f827-c67c-40d2-a0e2-5ef72c548c3b" SourceId="1" SourceUrl="http://localhost:9080/RentCarWSDLService/RentCarWSDLPort?wsdl" />
+    <MetadataFile FileName="HubService.xsd" MetadataType="Schema" ID="333b105a-810a-455b-b8f3-25b42f6b68ed" SourceId="1" SourceUrl="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" />
+    <MetadataFile FileName="CarRentalSchema.xsd" MetadataType="Schema" ID="d3cdf1ca-d11c-498d-8588-2f1ff38c0889" SourceId="1" SourceUrl="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/CarRentalSchema.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

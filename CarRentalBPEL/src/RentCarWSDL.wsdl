@@ -10,7 +10,11 @@
         </xsd:schema>
     </types>
     <message name="RentCarWSDLOperationRequest">
-        <part name="rentInput" element="ns:rentRequest"/>
+        <part name="rentalDate" type="xsd:string" />
+        <part name="returnDate" type="xsd:string" />
+        <part name="idCar" type="xsd:int" />
+        <part name="userId" type="xsd:string" />
+        <part name="providerId" type="xsd:string" />
     </message>
     <message name="RentCarWSDLOperationResponse">
         <part name="rentOutput" type="ns0:addRegistryResponse"/>

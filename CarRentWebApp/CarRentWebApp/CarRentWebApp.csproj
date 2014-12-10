@@ -131,6 +131,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\RentCarServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -177,6 +182,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\RentCarServiceReference\CarRentWebApp.RentCarServiceReference.addRegistryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\RentCarServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\RentCarServiceReference\configuration.svcinfo" />
+    <None Include="Service References\RentCarServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -205,6 +219,13 @@
     <None Include="Service References\GetCarsServiceReference\KutzCarRentalWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\RentCarServiceReference\CarRentalSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentCarServiceReference\HubService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RentCarServiceReference\RentCarWSDL.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -222,6 +243,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\GetCarServiceReference\" />
     <WCFMetadataStorage Include="Service References\GetCarsServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RentCarServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using CarRentWebApp.GetCarServiceReference;
 using CarRentWebApp.GetCarsServiceReference;
 using CarRentWebApp.Models;
+using CarRentWebApp.RentCarServiceReference;
 
 namespace CarRentWebApp.Controllers
 {
@@ -50,8 +51,7 @@ namespace CarRentWebApp.Controllers
             if (id == null) return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
 
             var client = new GetCarWSDLPortTypeClient();
-            var carWsResponse = client.GetCarWSDLOperation(2, "kutz");
-
+            var carWsResponse = client.GetCarWSDLOperation(id.GetValueOrDefault(1), provider);
 
             var car = new Car()
             {
@@ -63,6 +63,23 @@ namespace CarRentWebApp.Controllers
             };
             var rent = new Rent { Car = car };
             return View(rent);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RentCar([Bind(Include = "StartDate, EndDate, Car")]Rent rent, int Id, String Provider)
+        {
+
+            var client = new RentCarWSDLPortTypeClient();
+
+            var rentalDate = rent.StartDate.ToString("dd/mm/yyyy");
+            var returnDate = rent.EndDate.ToString("dd/mm/yyyy");
+            const string userId = "1";
+            var response = client.RentCarWSDLOperation(rentalDate, returnDate
+                , Id, userId, Provider);
+
+            return RedirectToAction("Index", "Rent");
+
         }
 
     }
