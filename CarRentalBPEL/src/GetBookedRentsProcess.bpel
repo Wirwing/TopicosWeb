@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process
+    name="GetBookedRentsProcess"
+    targetNamespace="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetBookedRentsProcess"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetBookedRentsProcess"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
+    xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
+    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" location="GetBookedRents.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/HubServiceWrapper" location="HubServiceWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://rentcar.hub.com/" location="http://localhost:8080/HubService/HubService?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="HubPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/HubServiceWrapper" partnerLinkType="tns:HubServiceLinkType" partnerRole="HubServiceRole"/>
+        <partnerLink name="GetBookedPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" partnerLinkType="tns:GetBookedRents" myRole="GetBookedRentsPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="GetRegistryOut" xmlns:tns="http://rentcar.hub.com/" messageType="tns:getRegistryResponse"/>
+        <variable name="GetRegistryIn" xmlns:tns="http://rentcar.hub.com/" messageType="tns:getRegistry"/>
+        <variable name="GetBookedRentsOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" messageType="tns:GetBookedRentsOperationRequest"/>
+        <variable name="GetBookedRentsOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" messageType="tns:GetBookedRentsOperationResponse"/>
+    </variables>
+    <sequence>
+        <receive name="GetBookedReceive" createInstance="yes" partnerLink="GetBookedPartnerLink" operation="GetBookedRentsOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" portType="tns:GetBookedRentsPortType" variable="GetBookedRentsOperationIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>string()</from>
+                <to variable="GetBookedRentsOperationOut" part="booked"/>
+            </copy>
+        </assign>
+        <invoke name="HubInvoke" partnerLink="HubPartnerLink" operation="getRegistry" xmlns:tns="http://rentcar.hub.com/" portType="tns:HubService" inputVariable="GetRegistryIn" outputVariable="GetRegistryOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from variable="GetRegistryOut" part="parameters"/>
+                <to variable="GetBookedRentsOperationOut" part="booked"/>
+            </copy>
+        </assign>
+        <reply name="GetBookedReply" partnerLink="GetBookedPartnerLink" operation="GetBookedRentsOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" portType="tns:GetBookedRentsPortType" variable="GetBookedRentsOperationOut"/>
+    </sequence>
+</process>

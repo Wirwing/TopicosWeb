@@ -18,17 +18,17 @@ public class Reservation {
     String idReservation;
     String rentalDate;
     String returnDate;
-    int idCar;
+    private Car car;
     double totalPrice;
 
     public Reservation() {
     }
-
-    public Reservation(String rentalDate, String returnDate, int idCar, double totalPrice) {
+    
+    public Reservation(String rentalDate, String returnDate, Car car, double totalPrice) {
         this.idReservation = UUID.randomUUID().toString();
         this.rentalDate = rentalDate;
         this.returnDate = returnDate;
-        this.idCar = idCar;
+        this.car = car;
         this.totalPrice = totalPrice;
     }
 
@@ -64,12 +64,12 @@ public class Reservation {
         this.returnDate = returnDate;
     }
 
-    public int getIdCar() {
-        return idCar;
+    public Car getCar() {
+        return car;
     }
 
-    public void setIdCar(int idCar) {
-        this.idCar = idCar;
+    public void setCar(Car car) {
+        this.car = car;
     }
 
     public double getTotalPrice() {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="GetBookedRents" targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents" xmlns:ns="http://rentcar.hub.com/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents">
+            <xsd:import namespace="http://rentcar.hub.com/" schemaLocation="file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="GetBookedRentsOperationRequest"/>
+    <message name="GetBookedRentsOperationResponse">
+        <part name="booked" type="ns:getRentalProviders"/>
+    </message>
+    <portType name="GetBookedRentsPortType">
+        <operation name="GetBookedRentsOperation">
+            <input name="input1" message="tns:GetBookedRentsOperationRequest"/>
+            <output name="output1" message="tns:GetBookedRentsOperationResponse"/>
+        </operation>
+    </portType>
+    <binding name="GetBookedRentsBinding" type="tns:GetBookedRentsPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetBookedRentsOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents"/>
+            </output>
+        </operation>
+    </binding>
+    <service name="GetBookedRentsService">
+        <port name="GetBookedRentsPort" binding="tns:GetBookedRentsBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/GetBookedRentsService/GetBookedRentsPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="GetBookedRents">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="GetBookedRentsPortTypeRole" portType="tns:GetBookedRentsPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
