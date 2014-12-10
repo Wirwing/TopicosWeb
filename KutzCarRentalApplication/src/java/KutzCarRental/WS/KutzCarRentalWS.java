@@ -56,7 +56,7 @@ public class KutzCarRentalWS {
             double pricePerDay = car.getPricePerDay();
             int totalDays = new Utils().calculateDays(rentalDate, returnDate);
             double priceTotal = totalDays*pricePerDay;
-            reservation = new Reservation(rentalDate, returnDate, idCar, priceTotal);
+            reservation = new Reservation(rentalDate, returnDate, car, priceTotal);
             isBooked = DataBase.getDB().addReservation(reservation, idCar);
             return reservation;
         } catch (Exception e){

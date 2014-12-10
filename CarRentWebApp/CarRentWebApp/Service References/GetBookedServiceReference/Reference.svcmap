@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5bd3fb96-fb43-4d95-99b4-47878b5e7de3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c8769f5b-895b-46da-b161-623692425e36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:9080/GetBookedRentsService/GetBookedRentsPort?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GetBookedRentsWSDL.wsdl" MetadataType="Wsdl" ID="db3e6192-2a4c-4845-b2bb-53f55213956e" SourceId="1" SourceUrl="http://localhost:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort?wsdl" />
-    <MetadataFile FileName="HubService.xsd" MetadataType="Schema" ID="7ecaa6ca-66f1-4720-ab9e-9c8821c2d069" SourceId="1" SourceUrl="http://office-depot:9080/CarRentalCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" />
+    <MetadataFile FileName="HubService.xsd" MetadataType="Schema" ID="02f60f31-f3b7-498e-a552-0bfad09166b1" SourceId="1" SourceUrl="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" />
+    <MetadataFile FileName="GetBookedRents.wsdl" MetadataType="Wsdl" ID="bcfac78f-b008-4eb0-8bb9-7c527ebe7b8b" SourceId="1" SourceUrl="http://localhost:9080/GetBookedRentsService/GetBookedRentsPort?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

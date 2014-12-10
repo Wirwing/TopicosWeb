@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP-ENV:Body>
+    <m:GetCarWSDLOperationResponse xmlns:m="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL">
+      <car>
+        <ns0:id xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">2</ns0:id>
+        <ns0:type xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">Automóvil</ns0:type>
+        <ns0:brand xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">Chevrolet Aveo</ns0:brand>
+        <ns0:transmission xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">Manual</ns0:transmission>
+        <ns0:numberOfPeople xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">5</ns0:numberOfPeople>
+        <ns0:numberOfBaggage xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">3</ns0:numberOfBaggage>
+        <ns0:pricePerDay xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">370.0</ns0:pricePerDay>
+      </car>
+    </m:GetCarWSDLOperationResponse>
+  </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

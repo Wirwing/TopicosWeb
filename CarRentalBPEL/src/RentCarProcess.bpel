@@ -9,105 +9,104 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
     xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
-    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
-    <import namespace="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" location="BechCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://WS.BechCarRental/" location="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" location="KutzCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://WS.KutzCarRental/" location="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">
+    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" location="RentCarWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://enterprise.netbeans.org/bpel/HubServiceWrapper" location="HubServiceWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://rentcar.hub.com/" location="http://localhost:8080/HubService/HubService?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
-    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" location="RentCarWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" location="KutzCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://WS.KutzCarRental/" location="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" location="BechCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://WS.BechCarRental/" location="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="RentCarPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" partnerLinkType="tns:RentCarWSDL" myRole="RentCarWSDLPortTypeRole"/>
         <partnerLink name="BechPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" partnerLinkType="tns:BechCarRentalWSLinkType" partnerRole="BechCarRentalWSRole"/>
         <partnerLink name="KutzPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" partnerLinkType="tns:KutzCarRentalWSLinkType" partnerRole="KutzCarRentalWSRole"/>
-        <partnerLink name="HubServicePartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/HubServiceWrapper" partnerLinkType="tns:HubServiceLinkType" partnerRole="HubServiceRole"/>
+        <partnerLink name="HubPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/HubServiceWrapper" partnerLinkType="tns:HubServiceLinkType" partnerRole="HubServiceRole"/>
+        <partnerLink name="RentCarPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" partnerLinkType="tns:RentCarWSDL" myRole="RentCarWSDLPortTypeRole"/>
     </partnerLinks>
     <variables>
         <variable name="AddRegistryOut" xmlns:tns="http://rentcar.hub.com/" messageType="tns:addRegistryResponse"/>
         <variable name="AddRegistryIn" xmlns:tns="http://rentcar.hub.com/" messageType="tns:addRegistry"/>
-        <variable name="RentCarWSDLOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" messageType="tns:RentCarWSDLOperationResponse"/>
-        <variable name="RentCarWSDLOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" messageType="tns:RentCarWSDLOperationRequest"/>
         <variable name="KutzCreateReservationOut" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:createReservationResponse"/>
         <variable name="KutzCreateReservationIn" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:createReservation"/>
         <variable name="BechCreateReservationOut" xmlns:tns="http://WS.BechCarRental/" messageType="tns:createReservationResponse"/>
         <variable name="BechCreateReservationIn" xmlns:tns="http://WS.BechCarRental/" messageType="tns:createReservation"/>
+        <variable name="RentCarWSDLOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" messageType="tns:RentCarWSDLOperationResponse"/>
+        <variable name="RentCarWSDLOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" messageType="tns:RentCarWSDLOperationRequest"/>
     </variables>
     <sequence>
-        <receive name="Receive1" createInstance="yes" partnerLink="RentCarPartnerLink" operation="RentCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" portType="tns:RentCarWSDLPortType" variable="RentCarWSDLOperationIn"/>
-        <assign name="AssignInit">
+        <receive name="RentCarReceive" createInstance="yes" partnerLink="RentCarPartnerLink" operation="RentCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" portType="tns:RentCarWSDLPortType" variable="RentCarWSDLOperationIn"/>
+        <assign name="Assign3">
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/rentalDate</from>
+                <from variable="RentCarWSDLOperationIn" part="rentalDate"/>
                 <to>$KutzCreateReservationIn.parameters/rentalDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/rentalDate</from>
+                <from variable="RentCarWSDLOperationIn" part="rentalDate"/>
                 <to>$BechCreateReservationIn.parameters/rentalDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/returnDate</from>
+                <from variable="RentCarWSDLOperationIn" part="returnDate"/>
                 <to>$KutzCreateReservationIn.parameters/returnDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/returnDate</from>
+                <from variable="RentCarWSDLOperationIn" part="returnDate"/>
                 <to>$BechCreateReservationIn.parameters/returnDate</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/idCar</from>
+                <from variable="RentCarWSDLOperationIn" part="idCar"/>
                 <to>$KutzCreateReservationIn.parameters/idCar</to>
             </copy>
             <copy>
-                <from>$RentCarWSDLOperationIn.part1/idCar</from>
+                <from variable="RentCarWSDLOperationIn" part="idCar"/>
                 <to>$BechCreateReservationIn.parameters/idCar</to>
             </copy>
         </assign>
-        <if name="if_providers">
-            <condition>'bech' = $RentCarWSDLOperationIn.part1/providerId</condition>
-            <sequence name="Sequence2">
-                <invoke name="BechRentInvoke" partnerLink="BechPartnerLink" operation="createReservation" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="BechCreateReservationIn" outputVariable="BechCreateReservationOut"/>
-                <assign name="BechRentAssignOut">
+        <if name="If1">
+            <condition>contains('bech', $RentCarWSDLOperationIn.providerId)</condition>
+            <sequence name="Sequence1">
+                <invoke name="BechInvoke" partnerLink="BechPartnerLink" operation="createReservation" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="BechCreateReservationIn" outputVariable="BechCreateReservationOut"/>
+                <assign name="Assign1">
                     <copy>
                         <from>$BechCreateReservationOut.parameters/return/idReservation</from>
                         <to>$AddRegistryIn.parameters/id</to>
                     </copy>
                     <copy>
-                        <from>$RentCarWSDLOperationIn.part1/userId</from>
+                        <from variable="RentCarWSDLOperationIn" part="userId"/>
                         <to>$AddRegistryIn.parameters/userId</to>
                     </copy>
                     <copy>
-                        <from>$RentCarWSDLOperationIn.part1/providerId</from>
+                        <from variable="RentCarWSDLOperationIn" part="providerId"/>
                         <to>$AddRegistryIn.parameters/providerUUID</to>
                     </copy>
                 </assign>
             </sequence>
-            <elseif>
-                <condition>'kutz' = $RentCarWSDLOperationIn.part1/providerId</condition>
-                <sequence name="Sequence1">
-                    <invoke name="KutzRentInvoke" partnerLink="KutzPartnerLink" operation="createReservation" xmlns:tns="http://WS.KutzCarRental/" portType="tns:KutzCarRentalWS" inputVariable="KutzCreateReservationIn" outputVariable="KutzCreateReservationOut"/>
-                    <assign name="KutzRentAssignOut">
+            <else>
+                <sequence name="Sequence2">
+                    <invoke name="KutzInvoke" partnerLink="KutzPartnerLink" operation="createReservation" xmlns:tns="http://WS.KutzCarRental/" portType="tns:KutzCarRentalWS" inputVariable="KutzCreateReservationIn" outputVariable="KutzCreateReservationOut"/>
+                    <assign name="Assign2">
                         <copy>
                             <from>$KutzCreateReservationOut.parameters/return/idReservation</from>
                             <to>$AddRegistryIn.parameters/id</to>
                         </copy>
                         <copy>
-                            <from>$RentCarWSDLOperationIn.part1/userId</from>
-                            <to>$AddRegistryIn.parameters/userId</to>
+                            <from variable="RentCarWSDLOperationIn" part="providerId"/>
+                            <to>$AddRegistryIn.parameters/providerUUID</to>
                         </copy>
                         <copy>
-                            <from>$RentCarWSDLOperationIn.part1/providerId</from>
-                            <to>$AddRegistryIn.parameters/providerUUID</to>
+                            <from variable="RentCarWSDLOperationIn" part="userId"/>
+                            <to>$AddRegistryIn.parameters/userId</to>
                         </copy>
                     </assign>
                 </sequence>
-            </elseif>
+            </else>
         </if>
-        <invoke name="HubRentInvoke" partnerLink="HubServicePartnerLink" operation="addRegistry" xmlns:tns="http://rentcar.hub.com/" portType="tns:HubService" inputVariable="AddRegistryIn" outputVariable="AddRegistryOut"/>
-        <assign name="Assign1">
+        <invoke name="HubInvoke" partnerLink="HubPartnerLink" operation="addRegistry" xmlns:tns="http://rentcar.hub.com/" portType="tns:HubService" inputVariable="AddRegistryIn" outputVariable="AddRegistryOut"/>
+        <assign name="Assign4">
             <copy>
                 <from variable="AddRegistryOut" part="parameters"/>
-                <to variable="RentCarWSDLOperationOut" part="part1"/>
+                <to variable="RentCarWSDLOperationOut" part="rentOutput"/>
             </copy>
         </assign>
-        <reply name="Reply1" partnerLink="RentCarPartnerLink" operation="RentCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" portType="tns:RentCarWSDLPortType" variable="RentCarWSDLOperationOut"/>
+        <reply name="RentCarReply" partnerLink="RentCarPartnerLink" operation="RentCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" portType="tns:RentCarWSDLPortType" variable="RentCarWSDLOperationOut"/>
     </sequence>
 </process>

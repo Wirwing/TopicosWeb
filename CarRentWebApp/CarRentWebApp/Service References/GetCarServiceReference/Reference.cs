@@ -9,29 +9,18 @@
 //------------------------------------------------------------------------------
 
 namespace CarRentWebApp.GetCarServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", ConfigurationName="GetCarServiceReference.GetCarWSDLPortType")]
-    public interface GetCarWSDLPortType {
-        
-        // CODEGEN: Generating message contract since message part namespace (http://xml.netbeans.org/schema/CarRentalSchema) does not match the default value ()
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="carResponse")]
-        CarRentWebApp.GetCarServiceReference.output1 GetCarWSDLOperation(CarRentWebApp.GetCarServiceReference.input1 request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> GetCarWSDLOperationAsync(CarRentWebApp.GetCarServiceReference.input1 request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema")]
-    public partial class CarComplexType : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CarComplexType", Namespace="http://xml.netbeans.org/schema/CarRentalSchema")]
+    [System.SerializableAttribute()]
+    public partial class CarComplexType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         private int idField;
         
@@ -47,87 +36,104 @@ namespace CarRentWebApp.GetCarServiceReference {
         
         private double pricePerDayField;
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
         public int id {
             get {
                 return this.idField;
             }
             set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false)]
         public string type {
             get {
                 return this.typeField;
             }
             set {
-                this.typeField = value;
-                this.RaisePropertyChanged("type");
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=2)]
         public string brand {
             get {
                 return this.brandField;
             }
             set {
-                this.brandField = value;
-                this.RaisePropertyChanged("brand");
+                if ((object.ReferenceEquals(this.brandField, value) != true)) {
+                    this.brandField = value;
+                    this.RaisePropertyChanged("brand");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=3)]
         public string transmission {
             get {
                 return this.transmissionField;
             }
             set {
-                this.transmissionField = value;
-                this.RaisePropertyChanged("transmission");
+                if ((object.ReferenceEquals(this.transmissionField, value) != true)) {
+                    this.transmissionField = value;
+                    this.RaisePropertyChanged("transmission");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
         public int numberOfPeople {
             get {
                 return this.numberOfPeopleField;
             }
             set {
-                this.numberOfPeopleField = value;
-                this.RaisePropertyChanged("numberOfPeople");
+                if ((this.numberOfPeopleField.Equals(value) != true)) {
+                    this.numberOfPeopleField = value;
+                    this.RaisePropertyChanged("numberOfPeople");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
         public int numberOfBaggage {
             get {
                 return this.numberOfBaggageField;
             }
             set {
-                this.numberOfBaggageField = value;
-                this.RaisePropertyChanged("numberOfBaggage");
+                if ((this.numberOfBaggageField.Equals(value) != true)) {
+                    this.numberOfBaggageField = value;
+                    this.RaisePropertyChanged("numberOfBaggage");
+                }
             }
         }
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
         public double pricePerDay {
             get {
                 return this.pricePerDayField;
             }
             set {
-                this.pricePerDayField = value;
-                this.RaisePropertyChanged("pricePerDay");
+                if ((this.pricePerDayField.Equals(value) != true)) {
+                    this.pricePerDayField = value;
+                    this.RaisePropertyChanged("pricePerDay");
+                }
             }
         }
         
@@ -141,43 +147,18 @@ namespace CarRentWebApp.GetCarServiceReference {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarWSDLOperation", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", IsWrapped=true)]
-    public partial class input1 {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", ConfigurationName="GetCarServiceReference.GetCarWSDLPortType")]
+    public interface GetCarWSDLPortType {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public int getCarId;
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.DataContractFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="car")]
+        CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int carId, string getCarProviderId);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
-        public string getCarProviderId;
-        
-        public input1() {
-        }
-        
-        public input1(int getCarId, string getCarProviderId) {
-            this.getCarId = getCarId;
-            this.getCarProviderId = getCarProviderId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetCarWSDLOperationResponse", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL", IsWrapped=true)]
-    public partial class output1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema")]
-        public CarRentWebApp.GetCarServiceReference.CarComplexType carResponse;
-        
-        public output1() {
-        }
-        
-        public output1(CarRentWebApp.GetCarServiceReference.CarComplexType carResponse) {
-            this.carResponse = carResponse;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="car")]
+        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.CarComplexType> GetCarWSDLOperationAsync(int carId, string getCarProviderId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -207,29 +188,12 @@ namespace CarRentWebApp.GetCarServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CarRentWebApp.GetCarServiceReference.output1 CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType.GetCarWSDLOperation(CarRentWebApp.GetCarServiceReference.input1 request) {
-            return base.Channel.GetCarWSDLOperation(request);
+        public CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int carId, string getCarProviderId) {
+            return base.Channel.GetCarWSDLOperation(carId, getCarProviderId);
         }
         
-        public CarRentWebApp.GetCarServiceReference.CarComplexType GetCarWSDLOperation(int getCarId, string getCarProviderId) {
-            CarRentWebApp.GetCarServiceReference.input1 inValue = new CarRentWebApp.GetCarServiceReference.input1();
-            inValue.getCarId = getCarId;
-            inValue.getCarProviderId = getCarProviderId;
-            CarRentWebApp.GetCarServiceReference.output1 retVal = ((CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType)(this)).GetCarWSDLOperation(inValue);
-            return retVal.carResponse;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType.GetCarWSDLOperationAsync(CarRentWebApp.GetCarServiceReference.input1 request) {
-            return base.Channel.GetCarWSDLOperationAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.output1> GetCarWSDLOperationAsync(int getCarId, string getCarProviderId) {
-            CarRentWebApp.GetCarServiceReference.input1 inValue = new CarRentWebApp.GetCarServiceReference.input1();
-            inValue.getCarId = getCarId;
-            inValue.getCarProviderId = getCarProviderId;
-            return ((CarRentWebApp.GetCarServiceReference.GetCarWSDLPortType)(this)).GetCarWSDLOperationAsync(inValue);
+        public System.Threading.Tasks.Task<CarRentWebApp.GetCarServiceReference.CarComplexType> GetCarWSDLOperationAsync(int carId, string getCarProviderId) {
+            return base.Channel.GetCarWSDLOperationAsync(carId, getCarProviderId);
         }
     }
 }

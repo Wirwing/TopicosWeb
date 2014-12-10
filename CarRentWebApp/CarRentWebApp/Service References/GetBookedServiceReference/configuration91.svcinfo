@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="L8upSIh2j3n7oK4HGWu6Wbe2SaM=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CSYrWHJfwnp2eBSNSYvF1oROSRU=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="GetBookedRentsWSDLBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="GetBookedRentsBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GetBookedRentsWSDLBinding</serializedValue>
+          <serializedValue>GetBookedRentsBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="GetBookedRentsWSDLPort" contract="GetBookedServiceReference.GetBookedRentsWSDLPortType" bindingType="basicHttpBinding" address="http://office-depot:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort" bindingConfiguration="GetBookedRentsWSDLBinding">
+    <endpoint name="GetBookedRentsPort" contract="GetBookedServiceReference.GetBookedRentsPortType" bindingType="basicHttpBinding" address="http://192.168.1.77:9080/GetBookedRentsService/GetBookedRentsPort" bindingConfiguration="GetBookedRentsBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://Office-Depot:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort</serializedValue>
+          <serializedValue>http://192.168.1.77:9080/GetBookedRentsService/GetBookedRentsPort</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -124,10 +124,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GetBookedRentsWSDLBinding</serializedValue>
+          <serializedValue>GetBookedRentsBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GetBookedServiceReference.GetBookedRentsWSDLPortType</serializedValue>
+          <serializedValue>GetBookedServiceReference.GetBookedRentsPortType</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>GetBookedRentsWSDLPort</serializedValue>
+          <serializedValue>GetBookedRentsPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

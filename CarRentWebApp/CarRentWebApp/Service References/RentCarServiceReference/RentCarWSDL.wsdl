@@ -8,15 +8,19 @@ A partner link type characterizes the conversational relationship between two se
   </plnk:partnerLinkType>
   <wsdl:types>
     <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL">
-      <xsd:import schemaLocation="http://Office-Depot:9080/CarRentalCA-sun-http-binding/CarRentalBPEL/CarRentalSchema.xsd" namespace="http://xml.netbeans.org/schema/CarRentalSchema" />
-      <xsd:import schemaLocation="http://localhost:8080/HubService/HubService?xsd=1" namespace="http://rentcar.hub.com/" />
+      <xsd:import schemaLocation="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/CarRentalSchema.xsd" namespace="http://xml.netbeans.org/schema/CarRentalSchema" />
+      <xsd:import schemaLocation="http://192.168.1.77:9080/CarBinderCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" namespace="http://rentcar.hub.com/" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="RentCarWSDLOperationResponse">
-    <wsdl:part name="part1" type="ns0:addRegistryResponse" />
+    <wsdl:part name="rentOutput" type="ns0:addRegistryResponse" />
   </wsdl:message>
   <wsdl:message name="RentCarWSDLOperationRequest">
-    <wsdl:part name="part1" type="ns:RentRequestComplexType" />
+    <wsdl:part name="rentalDate" type="xsd:string" />
+    <wsdl:part name="returnDate" type="xsd:string" />
+    <wsdl:part name="idCar" type="xsd:int" />
+    <wsdl:part name="userId" type="xsd:string" />
+    <wsdl:part name="providerId" type="xsd:string" />
   </wsdl:message>
   <wsdl:portType name="RentCarWSDLPortType">
     <wsdl:operation name="RentCarWSDLOperation">
@@ -38,7 +42,7 @@ A partner link type characterizes the conversational relationship between two se
   </wsdl:binding>
   <wsdl:service name="RentCarWSDLService">
     <wsdl:port name="RentCarWSDLPort" binding="tns:RentCarWSDLBinding">
-      <soap:address location="http://Office-Depot:9080/RentCarWSDLService/RentCarWSDLPort" />
+      <soap:address location="http://192.168.1.77:9080/RentCarWSDLService/RentCarWSDLPort" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -9,11 +9,11 @@
         </xsd:schema>
     </types>
     <message name="GetCarWSDLOperationRequest">
-        <part name="getCarId" type="xsd:int"/>
+        <part name="carId" type="xsd:int"/>
         <part name="getCarProviderId" type="xsd:string"/>
     </message>
     <message name="GetCarWSDLOperationResponse">
-        <part name="getCarResponse" element="ns:carResponse"/>
+        <part name="car" type="ns:CarComplexType"/>
     </message>
     <portType name="GetCarWSDLPortType">
         <operation name="GetCarWSDLOperation">

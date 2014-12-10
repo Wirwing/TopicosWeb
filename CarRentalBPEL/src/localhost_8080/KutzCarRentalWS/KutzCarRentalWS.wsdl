@@ -4,23 +4,14 @@
 <xsd:import namespace="http://WS.KutzCarRental/" schemaLocation="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getCars">
-<part name="parameters" element="tns:getCars"/>
-</message>
-<message name="getCarsResponse">
-<part name="parameters" element="tns:getCarsResponse"/>
-</message>
-<message name="findCarById">
-<part name="parameters" element="tns:findCarById"/>
-</message>
-<message name="findCarByIdResponse">
-<part name="parameters" element="tns:findCarByIdResponse"/>
-</message>
 <message name="getReservation">
 <part name="parameters" element="tns:getReservation"/>
 </message>
 <message name="getReservationResponse">
 <part name="parameters" element="tns:getReservationResponse"/>
+</message>
+<message name="ParseException">
+<part name="fault" element="tns:ParseException"/>
 </message>
 <message name="getReservations">
 <part name="parameters" element="tns:getReservations"/>
@@ -34,17 +25,23 @@
 <message name="createReservationResponse">
 <part name="parameters" element="tns:createReservationResponse"/>
 </message>
-<message name="ParseException">
-<part name="fault" element="tns:ParseException"/>
+<message name="getCars">
+<part name="parameters" element="tns:getCars"/>
+</message>
+<message name="getCarsResponse">
+<part name="parameters" element="tns:getCarsResponse"/>
+</message>
+<message name="findCarById">
+<part name="parameters" element="tns:findCarById"/>
+</message>
+<message name="findCarByIdResponse">
+<part name="parameters" element="tns:findCarByIdResponse"/>
 </message>
 <portType name="KutzCarRentalWS">
-<operation name="getCars">
-<input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getCarsRequest" message="tns:getCars"/>
-<output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getCarsResponse" message="tns:getCarsResponse"/>
-</operation>
-<operation name="findCarById">
-<input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/findCarByIdRequest" message="tns:findCarById"/>
-<output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/findCarByIdResponse" message="tns:findCarByIdResponse"/>
+<operation name="getReservation">
+<input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getReservationRequest" message="tns:getReservation"/>
+<output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getReservationResponse" message="tns:getReservationResponse"/>
+<fault message="tns:ParseException" name="ParseException" wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getReservation/Fault/ParseException"/>
 </operation>
 <operation name="getReservations">
 <input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getReservationsRequest" message="tns:getReservations"/>
@@ -55,10 +52,18 @@
 <output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/createReservationResponse" message="tns:createReservationResponse"/>
 <fault message="tns:ParseException" name="ParseException" wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/createReservation/Fault/ParseException"/>
 </operation>
+<operation name="getCars">
+<input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getCarsRequest" message="tns:getCars"/>
+<output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/getCarsResponse" message="tns:getCarsResponse"/>
+</operation>
+<operation name="findCarById">
+<input wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/findCarByIdRequest" message="tns:findCarById"/>
+<output wsam:Action="http://WS.KutzCarRental/KutzCarRentalWS/findCarByIdResponse" message="tns:findCarByIdResponse"/>
+</operation>
 </portType>
 <binding name="KutzCarRentalWSPortBinding" type="tns:KutzCarRentalWS">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="getCars">
+<operation name="getReservation">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -66,15 +71,9 @@
 <output>
 <soap:body use="literal"/>
 </output>
-</operation>
-<operation name="findCarById">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
+<fault name="ParseException">
+<soap:fault name="ParseException" use="literal"/>
+</fault>
 </operation>
 <operation name="getReservations">
 <soap:operation soapAction=""/>
@@ -96,6 +95,24 @@
 <fault name="ParseException">
 <soap:fault name="ParseException" use="literal"/>
 </fault>
+</operation>
+<operation name="getCars">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findCarById">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
 </operation>
 </binding>
 <service name="KutzCarRentalWS">

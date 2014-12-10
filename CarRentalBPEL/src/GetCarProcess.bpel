@@ -9,108 +9,108 @@
     xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
     xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
     xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
-    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling">
-    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" location="GetCarWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://xml.netbeans.org/schema/CarRentalSchema">
     <import namespace="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" location="BechCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://WS.BechCarRental/" location="http://localhost:8080/BechCarRentalWS/BechCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" location="KutzCarRentalWSWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <import namespace="http://WS.KutzCarRental/" location="http://localhost:8080/KutzCarRentalWS/KutzCarRentalWS?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" location="GetCarWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
     <partnerLinks>
-        <partnerLink name="KutzPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" partnerLinkType="tns:KutzCarRentalWSLinkType" partnerRole="KutzCarRentalWSRole"/>
+        <partnerLink name="BPELPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" partnerLinkType="tns:GetCarWSDL" myRole="GetCarWSDLPortTypeRole"/>
         <partnerLink name="BechPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/BechCarRentalWSWrapper" partnerLinkType="tns:BechCarRentalWSLinkType" partnerRole="BechCarRentalWSRole"/>
-        <partnerLink name="GetCarPartnerLink" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" partnerLinkType="tns:GetCarWSDL" myRole="GetCarWSDLPortTypeRole"/>
+        <partnerLink name="KutzPartnerLink" xmlns:tns="http://enterprise.netbeans.org/bpel/KutzCarRentalWSWrapper" partnerLinkType="tns:KutzCarRentalWSLinkType" partnerRole="KutzCarRentalWSRole"/>
     </partnerLinks>
     <variables>
-        <variable name="GetCarWSDLOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" messageType="tns:GetCarWSDLOperationResponse"/>
-        <variable name="BechFindCarByIdOut" xmlns:tns="http://WS.BechCarRental/" messageType="tns:findCarByIdResponse"/>
-        <variable name="BechFindCarByIdIn" xmlns:tns="http://WS.BechCarRental/" messageType="tns:findCarById"/>
         <variable name="KutzFindCarByIdOut" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:findCarByIdResponse"/>
         <variable name="KutzFindCarByIdIn" xmlns:tns="http://WS.KutzCarRental/" messageType="tns:findCarById"/>
+        <variable name="BechFindCarByIdOut" xmlns:tns="http://WS.BechCarRental/" messageType="tns:findCarByIdResponse"/>
+        <variable name="BechFindCarByIdIn" xmlns:tns="http://WS.BechCarRental/" messageType="tns:findCarById"/>
+        <variable name="GetCarWSDLOperationOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" messageType="tns:GetCarWSDLOperationResponse"/>
         <variable name="GetCarWSDLOperationIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" messageType="tns:GetCarWSDLOperationRequest"/>
     </variables>
     <sequence>
-        <receive name="GetCarReceive" createInstance="yes" partnerLink="GetCarPartnerLink" operation="GetCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" portType="tns:GetCarWSDLPortType" variable="GetCarWSDLOperationIn"/>
-        <assign name="Assign3">
+        <receive name="GetCarReceive" createInstance="yes" partnerLink="BPELPartnerLink" operation="GetCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" portType="tns:GetCarWSDLPortType" variable="GetCarWSDLOperationIn"/>
+        <assign name="Assign1">
             <copy>
-                <from variable="GetCarWSDLOperationIn" part="getCarId"/>
-                <to>$BechFindCarByIdIn.parameters/idCar</to>
+                <from variable="GetCarWSDLOperationIn" part="carId"/>
+                <to>$KutzFindCarByIdIn.parameters/idCar</to>
             </copy>
             <copy>
-                <from variable="GetCarWSDLOperationIn" part="getCarId"/>
-                <to>$KutzFindCarByIdIn.parameters/idCar</to>
+                <from variable="GetCarWSDLOperationIn" part="carId"/>
+                <to>$BechFindCarByIdIn.parameters/idCar</to>
             </copy>
         </assign>
         <if name="If1">
             <condition>contains('kutz', $GetCarWSDLOperationIn.getCarProviderId)</condition>
-            <sequence name="Sequence2">
-                <invoke name="KutzInvoke" partnerLink="KutzPartnerLink" operation="findCarById" xmlns:tns="http://WS.KutzCarRental/" portType="tns:KutzCarRentalWS" inputVariable="KutzFindCarByIdIn" outputVariable="KutzFindCarByIdOut"/>
+            <sequence name="Sequence1">
+                <invoke name="BechInvoke" partnerLink="BechPartnerLink" operation="findCarById" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="BechFindCarByIdIn" outputVariable="BechFindCarByIdOut"/>
                 <assign name="Assign2">
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/id</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/id</to>
+                        <from>$BechFindCarByIdOut.parameters/return/id</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:id</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/brand</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/brand</to>
+                        <from>$BechFindCarByIdOut.parameters/return/brand</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:brand</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/numberBaggage</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/numberOfBaggage</to>
+                        <from>$BechFindCarByIdOut.parameters/return/numberBaggage</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:numberOfBaggage</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/numberPeople</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/numberOfPeople</to>
+                        <from>$BechFindCarByIdOut.parameters/return/numberPeople</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:numberOfPeople</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/transmission</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/transmission</to>
+                        <from>$BechFindCarByIdOut.parameters/return/pricePerDay</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:pricePerDay</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/type</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/type</to>
+                        <from>$BechFindCarByIdOut.parameters/return/transmission</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:transmission</to>
                     </copy>
                     <copy>
-                        <from>$KutzFindCarByIdOut.parameters/return/pricePerDay</from>
-                        <to>$GetCarWSDLOperationOut.getCarResponse/pricePerDay</to>
+                        <from>$BechFindCarByIdOut.parameters/return/type</from>
+                        <to>$GetCarWSDLOperationOut.car/ns0:type</to>
                     </copy>
                 </assign>
             </sequence>
             <else>
-                <sequence name="Sequence1">
-                    <invoke name="BechInvoke" partnerLink="BechPartnerLink" operation="findCarById" xmlns:tns="http://WS.BechCarRental/" portType="tns:BechCarRentalWS" inputVariable="BechFindCarByIdIn" outputVariable="BechFindCarByIdOut"/>
-                    <assign name="Assign1">
+                <sequence name="Sequence2">
+                    <invoke name="KutzInvoke" partnerLink="KutzPartnerLink" operation="findCarById" xmlns:tns="http://WS.KutzCarRental/" portType="tns:KutzCarRentalWS" inputVariable="KutzFindCarByIdIn" outputVariable="KutzFindCarByIdOut"/>
+                    <assign name="Assign3">
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/brand</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/brand</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/id</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:id</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/id</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/id</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/brand</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:brand</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/type</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/type</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/type</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:type</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/transmission</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/transmission</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/transmission</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:transmission</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/pricePerDay</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/pricePerDay</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/numberPeople</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:numberOfPeople</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/numberPeople</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/numberOfPeople</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/numberBaggage</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:numberOfBaggage</to>
                         </copy>
                         <copy>
-                            <from>$BechFindCarByIdOut.parameters/return/numberBaggage</from>
-                            <to>$GetCarWSDLOperationOut.getCarResponse/numberOfBaggage</to>
+                            <from>$KutzFindCarByIdOut.parameters/return/pricePerDay</from>
+                            <to>$GetCarWSDLOperationOut.car/ns0:pricePerDay</to>
                         </copy>
                     </assign>
                 </sequence>
             </else>
         </if>
-        <reply name="GetCarReply" partnerLink="GetCarPartnerLink" operation="GetCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" portType="tns:GetCarWSDLPortType" variable="GetCarWSDLOperationOut"/>
+        <reply name="GetCarReply" partnerLink="BPELPartnerLink" operation="GetCarWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" portType="tns:GetCarWSDLPortType" variable="GetCarWSDLOperationOut"/>
     </sequence>
 </process>

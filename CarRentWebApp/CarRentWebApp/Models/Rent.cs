@@ -30,5 +30,6 @@ namespace CarRentWebApp.Models
             get { return startDate; }
             set { startDate = value; }
         }
+
     }
 }

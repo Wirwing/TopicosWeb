@@ -12,17 +12,17 @@ namespace CarRentWebApp.GetBookedServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL", ConfigurationName="GetBookedServiceReference.GetBookedRentsWSDLPortType")]
-    public interface GetBookedRentsWSDLPortType {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents", ConfigurationName="GetBookedServiceReference.GetBookedRentsPortType")]
+    public interface GetBookedRentsPortType {
         
-        // CODEGEN: Generating message contract since message part namespace (http://rentcar.hub.com/) does not match the default value ()
+        // CODEGEN: Parameter 'booked' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="getRegistryResponse")]
-        CarRentWebApp.GetBookedServiceReference.output1 GetBookedRentsWSDLOperation(CarRentWebApp.GetBookedServiceReference.input1 request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="booked")]
+        CarRentWebApp.GetBookedServiceReference.output1 GetBookedRentsOperation(CarRentWebApp.GetBookedServiceReference.input1 request);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> GetBookedRentsWSDLOperationAsync(CarRentWebApp.GetBookedServiceReference.input1 request);
+        System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> GetBookedRentsOperationAsync(CarRentWebApp.GetBookedServiceReference.input1 request);
     }
     
     /// <remarks/>
@@ -116,87 +116,78 @@ namespace CarRentWebApp.GetBookedServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookedRentsWSDLOperation", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookedRentsOperation", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents", IsWrapped=true)]
     public partial class input1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public string inputBookedRents;
-        
         public input1() {
-        }
-        
-        public input1(string inputBookedRents) {
-            this.inputBookedRents = inputBookedRents;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookedRentsWSDLOperationResponse", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetBookedRentsOperationResponse", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRents", IsWrapped=true)]
     public partial class output1 {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://rentcar.hub.com/", Order=0)]
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://rentcar.hub.com/")]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute()]
         [System.Xml.Serialization.XmlArrayItemAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=false)]
-        public CarRentWebApp.GetBookedServiceReference.carRentLog[] getRegistryResponse;
+        public CarRentWebApp.GetBookedServiceReference.carRentLog[] booked;
         
         public output1() {
         }
         
-        public output1(CarRentWebApp.GetBookedServiceReference.carRentLog[] getRegistryResponse) {
-            this.getRegistryResponse = getRegistryResponse;
+        public output1(CarRentWebApp.GetBookedServiceReference.carRentLog[] booked) {
+            this.booked = booked;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface GetBookedRentsWSDLPortTypeChannel : CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType, System.ServiceModel.IClientChannel {
+    public interface GetBookedRentsPortTypeChannel : CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetBookedRentsWSDLPortTypeClient : System.ServiceModel.ClientBase<CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType>, CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType {
+    public partial class GetBookedRentsPortTypeClient : System.ServiceModel.ClientBase<CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType>, CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType {
         
-        public GetBookedRentsWSDLPortTypeClient() {
+        public GetBookedRentsPortTypeClient() {
         }
         
-        public GetBookedRentsWSDLPortTypeClient(string endpointConfigurationName) : 
+        public GetBookedRentsPortTypeClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public GetBookedRentsWSDLPortTypeClient(string endpointConfigurationName, string remoteAddress) : 
+        public GetBookedRentsPortTypeClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public GetBookedRentsWSDLPortTypeClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public GetBookedRentsPortTypeClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public GetBookedRentsWSDLPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public GetBookedRentsPortTypeClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CarRentWebApp.GetBookedServiceReference.output1 CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType.GetBookedRentsWSDLOperation(CarRentWebApp.GetBookedServiceReference.input1 request) {
-            return base.Channel.GetBookedRentsWSDLOperation(request);
+        CarRentWebApp.GetBookedServiceReference.output1 CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType.GetBookedRentsOperation(CarRentWebApp.GetBookedServiceReference.input1 request) {
+            return base.Channel.GetBookedRentsOperation(request);
         }
         
-        public CarRentWebApp.GetBookedServiceReference.carRentLog[] GetBookedRentsWSDLOperation(string inputBookedRents) {
+        public CarRentWebApp.GetBookedServiceReference.carRentLog[] GetBookedRentsOperation() {
             CarRentWebApp.GetBookedServiceReference.input1 inValue = new CarRentWebApp.GetBookedServiceReference.input1();
-            inValue.inputBookedRents = inputBookedRents;
-            CarRentWebApp.GetBookedServiceReference.output1 retVal = ((CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType)(this)).GetBookedRentsWSDLOperation(inValue);
-            return retVal.getRegistryResponse;
+            CarRentWebApp.GetBookedServiceReference.output1 retVal = ((CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType)(this)).GetBookedRentsOperation(inValue);
+            return retVal.booked;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType.GetBookedRentsWSDLOperationAsync(CarRentWebApp.GetBookedServiceReference.input1 request) {
-            return base.Channel.GetBookedRentsWSDLOperationAsync(request);
+        System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType.GetBookedRentsOperationAsync(CarRentWebApp.GetBookedServiceReference.input1 request) {
+            return base.Channel.GetBookedRentsOperationAsync(request);
         }
         
-        public System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> GetBookedRentsWSDLOperationAsync(string inputBookedRents) {
+        public System.Threading.Tasks.Task<CarRentWebApp.GetBookedServiceReference.output1> GetBookedRentsOperationAsync() {
             CarRentWebApp.GetBookedServiceReference.input1 inValue = new CarRentWebApp.GetBookedServiceReference.input1();
-            inValue.inputBookedRents = inputBookedRents;
-            return ((CarRentWebApp.GetBookedServiceReference.GetBookedRentsWSDLPortType)(this)).GetBookedRentsWSDLOperationAsync(inValue);
+            return ((CarRentWebApp.GetBookedServiceReference.GetBookedRentsPortType)(this)).GetBookedRentsOperationAsync(inValue);
         }
     }
 }

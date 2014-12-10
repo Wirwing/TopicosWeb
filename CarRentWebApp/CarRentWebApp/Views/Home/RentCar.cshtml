@@ -70,6 +70,10 @@
                     <input type="submit" value="Rentar" class="btn btn-primary" />
                 </div>
             </div>
+            
+            @Html.HiddenFor(model => model.Car.Id)
+            @Html.HiddenFor(model => model.Car.Provider)
+
         </div>
     }
 </div>

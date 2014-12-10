@@ -14,13 +14,13 @@
 
 <xs:element name="getCarsResponse" type="tns:getCarsResponse"/>
 
-<xs:element name="getReservations" type="tns:getReservations"/>
-
-<xs:element name="getReservationsResponse" type="tns:getReservationsResponse"/>
-
 <xs:element name="getReservation" type="tns:getReservation"/>
 
 <xs:element name="getReservationResponse" type="tns:getReservationResponse"/>
+
+<xs:element name="getReservations" type="tns:getReservations"/>
+
+<xs:element name="getReservationsResponse" type="tns:getReservationsResponse"/>
 
 <xs:complexType name="createReservation">
 <xs:sequence>
@@ -38,8 +38,8 @@
 
 <xs:complexType name="reservation">
 <xs:sequence>
-<xs:element name="idCar" type="xs:int"/>
-<xs:element name="idReservation" type="xs:string"/>
+<xs:element name="car" type="tns:car" minOccurs="0"/>
+<xs:element name="idReservation" type="xs:string" minOccurs="0"/>
 <xs:element name="rentalDate" type="xs:string" minOccurs="0"/>
 <xs:element name="returnDate" type="xs:string" minOccurs="0"/>
 <xs:element name="totalPrice" type="xs:double"/>
@@ -50,17 +50,6 @@
 <xs:sequence>
 <xs:element name="errorOffset" type="xs:int"/>
 <xs:element name="message" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getReservation">
-<xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-<xs:complexType name="getReservationResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:reservation" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -96,6 +85,18 @@
 <xs:element name="pricePerDay" type="xs:double"/>
 <xs:element name="transmission" type="xs:string" minOccurs="0"/>
 <xs:element name="type" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getReservation">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getReservationResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:reservation" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

@@ -17,7 +17,6 @@
   <xs:complexType name="carRentLog">
     <xs:sequence>
       <xs:element minOccurs="0" name="bookedDate" type="xs:string" />
-      <xs:element minOccurs="0" name="brandName" type="xs:string" />
       <xs:element minOccurs="0" name="id" type="xs:string" />
       <xs:element minOccurs="0" name="providerUUID" type="xs:string" />
       <xs:element minOccurs="0" name="status" type="xs:string" />
@@ -43,7 +42,6 @@
       <xs:element minOccurs="0" name="id" type="xs:string" />
       <xs:element minOccurs="0" name="userId" type="xs:string" />
       <xs:element minOccurs="0" name="providerUUID" type="xs:string" />
-      <xs:element minOccurs="0" name="brandName" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="addRegistryResponse">

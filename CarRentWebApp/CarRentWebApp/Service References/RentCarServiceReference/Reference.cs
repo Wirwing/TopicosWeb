@@ -16,202 +16,13 @@ namespace CarRentWebApp.RentCarServiceReference {
     public interface RentCarWSDLPortType {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        CarRentWebApp.RentCarServiceReference.output1 RentCarWSDLOperation(CarRentWebApp.RentCarServiceReference.input1 request);
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="rentOutput")]
+        CarRentWebApp.RentCarServiceReference.addRegistryResponse RentCarWSDLOperation(string rentalDate, string returnDate, int idCar, string userId, string providerId);
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        System.Threading.Tasks.Task<CarRentWebApp.RentCarServiceReference.output1> RentCarWSDLOperationAsync(CarRentWebApp.RentCarServiceReference.input1 request);
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://xml.netbeans.org/schema/CarRentalSchema")]
-    public partial class RentRequestComplexType : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string rentalDateField;
-        
-        private string returnDateField;
-        
-        private int idCarField;
-        
-        private string userIdField;
-        
-        private string providerIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string rentalDate {
-            get {
-                return this.rentalDateField;
-            }
-            set {
-                this.rentalDateField = value;
-                this.RaisePropertyChanged("rentalDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string returnDate {
-            get {
-                return this.returnDateField;
-            }
-            set {
-                this.returnDateField = value;
-                this.RaisePropertyChanged("returnDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idCar {
-            get {
-                return this.idCarField;
-            }
-            set {
-                this.idCarField = value;
-                this.RaisePropertyChanged("idCar");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string userId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string providerId {
-            get {
-                return this.providerIdField;
-            }
-            set {
-                this.providerIdField = value;
-                this.RaisePropertyChanged("providerId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rentcar.hub.com/")]
-    public partial class carRentLog : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string bookedDateField;
-        
-        private string brandNameField;
-        
-        private string idField;
-        
-        private string providerUUIDField;
-        
-        private string statusField;
-        
-        private string userIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string bookedDate {
-            get {
-                return this.bookedDateField;
-            }
-            set {
-                this.bookedDateField = value;
-                this.RaisePropertyChanged("bookedDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string brandName {
-            get {
-                return this.brandNameField;
-            }
-            set {
-                this.brandNameField = value;
-                this.RaisePropertyChanged("brandName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-                this.RaisePropertyChanged("id");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string providerUUID {
-            get {
-                return this.providerUUIDField;
-            }
-            set {
-                this.providerUUIDField = value;
-                this.RaisePropertyChanged("providerUUID");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string status {
-            get {
-                return this.statusField;
-            }
-            set {
-                this.statusField = value;
-                this.RaisePropertyChanged("status");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string userId {
-            get {
-                return this.userIdField;
-            }
-            set {
-                this.userIdField = value;
-                this.RaisePropertyChanged("userId");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
+        [return: System.ServiceModel.MessageParameterAttribute(Name="rentOutput")]
+        System.Threading.Tasks.Task<CarRentWebApp.RentCarServiceReference.addRegistryResponse> RentCarWSDLOperationAsync(string rentalDate, string returnDate, int idCar, string userId, string providerId);
     }
     
     /// <remarks/>
@@ -246,35 +57,91 @@ namespace CarRentWebApp.RentCarServiceReference {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.0.30319.34230")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RentCarWSDLOperation", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL", IsWrapped=true)]
-    public partial class input1 {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://rentcar.hub.com/")]
+    public partial class carRentLog : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public CarRentWebApp.RentCarServiceReference.RentRequestComplexType part1;
+        private string bookedDateField;
         
-        public input1() {
+        private string idField;
+        
+        private string providerUUIDField;
+        
+        private string statusField;
+        
+        private string userIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string bookedDate {
+            get {
+                return this.bookedDateField;
+            }
+            set {
+                this.bookedDateField = value;
+                this.RaisePropertyChanged("bookedDate");
+            }
         }
         
-        public input1(CarRentWebApp.RentCarServiceReference.RentRequestComplexType part1) {
-            this.part1 = part1;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="RentCarWSDLOperationResponse", WrapperNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL", IsWrapped=true)]
-    public partial class output1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
-        public CarRentWebApp.RentCarServiceReference.addRegistryResponse part1;
-        
-        public output1() {
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
         }
         
-        public output1(CarRentWebApp.RentCarServiceReference.addRegistryResponse part1) {
-            this.part1 = part1;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string providerUUID {
+            get {
+                return this.providerUUIDField;
+            }
+            set {
+                this.providerUUIDField = value;
+                this.RaisePropertyChanged("providerUUID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                this.statusField = value;
+                this.RaisePropertyChanged("status");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string userId {
+            get {
+                return this.userIdField;
+            }
+            set {
+                this.userIdField = value;
+                this.RaisePropertyChanged("userId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
@@ -305,20 +172,12 @@ namespace CarRentWebApp.RentCarServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        CarRentWebApp.RentCarServiceReference.output1 CarRentWebApp.RentCarServiceReference.RentCarWSDLPortType.RentCarWSDLOperation(CarRentWebApp.RentCarServiceReference.input1 request) {
-            return base.Channel.RentCarWSDLOperation(request);
+        public CarRentWebApp.RentCarServiceReference.addRegistryResponse RentCarWSDLOperation(string rentalDate, string returnDate, int idCar, string userId, string providerId) {
+            return base.Channel.RentCarWSDLOperation(rentalDate, returnDate, idCar, userId, providerId);
         }
         
-        public CarRentWebApp.RentCarServiceReference.addRegistryResponse RentCarWSDLOperation(CarRentWebApp.RentCarServiceReference.RentRequestComplexType part1) {
-            CarRentWebApp.RentCarServiceReference.input1 inValue = new CarRentWebApp.RentCarServiceReference.input1();
-            inValue.part1 = part1;
-            CarRentWebApp.RentCarServiceReference.output1 retVal = ((CarRentWebApp.RentCarServiceReference.RentCarWSDLPortType)(this)).RentCarWSDLOperation(inValue);
-            return retVal.part1;
-        }
-        
-        public System.Threading.Tasks.Task<CarRentWebApp.RentCarServiceReference.output1> RentCarWSDLOperationAsync(CarRentWebApp.RentCarServiceReference.input1 request) {
-            return base.Channel.RentCarWSDLOperationAsync(request);
+        public System.Threading.Tasks.Task<CarRentWebApp.RentCarServiceReference.addRegistryResponse> RentCarWSDLOperationAsync(string rentalDate, string returnDate, int idCar, string userId, string providerId) {
+            return base.Channel.RentCarWSDLOperationAsync(rentalDate, returnDate, idCar, userId, providerId);
         }
     }
 }

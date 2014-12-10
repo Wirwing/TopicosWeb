@@ -1,0 +1,15 @@
+<soapenv:Envelope xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ren="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" xmlns:car="http://xml.netbeans.org/schema/CarRentalSchema">
+  <soapenv:Body>
+    <ren:RentCarWSDLOperation>
+      <rentInput>
+        <car:rentRequest>
+          <car:rentalDate>20/12/2014</car:rentalDate>
+          <car:returnDate>22/12/2014</car:returnDate>
+          <car:idCar>1</car:idCar>
+          <car:userId>1</car:userId>
+          <car:providerId>kutz</car:providerId>
+        </car:rentRequest>
+      </rentInput>
+    </ren:RentCarWSDLOperation>
+  </soapenv:Body>
+</soapenv:Envelope>

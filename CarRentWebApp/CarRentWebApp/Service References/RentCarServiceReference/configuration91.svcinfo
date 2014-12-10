@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Wi58rZFawhUlyvjPwkQG6Ha/Hlo=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="V2mWdqxZU2uJPp+MAOIlBMJEqbQ=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="RentCarWSDLBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="RentCarWSDLPort" contract="RentCarServiceReference.RentCarWSDLPortType" bindingType="basicHttpBinding" address="http://office-depot:9080/RentCarWSDLService/RentCarWSDLPort" bindingConfiguration="RentCarWSDLBinding">
+    <endpoint name="RentCarWSDLPort" contract="RentCarServiceReference.RentCarWSDLPortType" bindingType="basicHttpBinding" address="http://192.168.1.77:9080/RentCarWSDLService/RentCarWSDLPort" bindingConfiguration="RentCarWSDLBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://Office-Depot:9080/RentCarWSDLService/RentCarWSDLPort</serializedValue>
+          <serializedValue>http://192.168.1.77:9080/RentCarWSDLService/RentCarWSDLPort</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
