@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5bd3fb96-fb43-4d95-99b4-47878b5e7de3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GetBookedRentsWSDL.wsdl" MetadataType="Wsdl" ID="db3e6192-2a4c-4845-b2bb-53f55213956e" SourceId="1" SourceUrl="http://localhost:9080/GetBookedRentsWSDLService/GetBookedRentsWSDLPort?wsdl" />
+    <MetadataFile FileName="HubService.xsd" MetadataType="Schema" ID="7ecaa6ca-66f1-4720-ab9e-9c8821c2d069" SourceId="1" SourceUrl="http://office-depot:9080/CarRentalCA-sun-http-binding/CarRentalBPEL/file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
