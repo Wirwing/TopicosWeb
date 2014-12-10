@@ -5,12 +5,14 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL" xmlns:ns="http://rentcar.hub.com/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
     <types>
         <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL">
-            <xsd:import namespace="http://rentcar.hub.com/" schemaLocation=""/>
+            <xsd:import namespace="http://rentcar.hub.com/" schemaLocation="file:/C:/Users/Irving/Documents/Git/TopicosWeb/CarRentalBPEL/retrieved/src/localhost_8080/HubService/HubService.xsd_1.xsd"/>
         </xsd:schema>
     </types>
-    <message name="GetBookedRentsWSDLOperationRequest"/>
+    <message name="GetBookedRentsWSDLOperationRequest">
+        <part name="inputBookedRents" type="xsd:string"/>
+    </message>
     <message name="GetBookedRentsWSDLOperationResponse">
-        <part name="part1" type="ns:getRegistryResponse"/>
+        <part name="bookedResponses" element="ns:getRegistryResponse"/>
     </message>
     <portType name="GetBookedRentsWSDLPortType">
         <operation name="GetBookedRentsWSDLOperation">

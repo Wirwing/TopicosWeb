@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://WS.BechCarRental/" xmlns:ns2="http://rentcar.hub.com/" xmlns:ns3="http://WS.KutzCarRental/" xmlns:ns4="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarsWSDL" xmlns:ns5="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" xmlns:ns6="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" xmlns:ns7="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetCarProcess" xmlns:ns8="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetCarsProcess" xmlns:ns9="http://enterprise.netbeans.org/bpel/CarRentalBPEL/RentCarProcess" xmlns:xlink="http://www.w3.org/2000/xlink">
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://WS.BechCarRental/" xmlns:ns10="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetCarsProcess" xmlns:ns11="http://enterprise.netbeans.org/bpel/CarRentalBPEL/RentCarProcess" xmlns:ns2="http://rentcar.hub.com/" xmlns:ns3="http://WS.KutzCarRental/" xmlns:ns4="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarsWSDL" xmlns:ns5="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/RentCarWSDL" xmlns:ns6="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetCarWSDL" xmlns:ns7="http://j2ee.netbeans.org/wsdl/CarRentalBPEL/src/GetBookedRentsWSDL" xmlns:ns8="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetBookedRentsProcess" xmlns:ns9="http://enterprise.netbeans.org/bpel/CarRentalBPEL/GetCarProcess" xmlns:xlink="http://www.w3.org/2000/xlink">
     <endpoints>
         <endpoint endpoint-name="BechCarRentalWSPort" interface-name="ns1:BechCarRentalWS" name="endpoint1" service-name="ns1:BechCarRentalWS"/>
         <endpoint endpoint-name="HubServicePort" interface-name="ns2:HubService" name="endpoint2" service-name="ns2:HubService"/>
@@ -7,58 +7,68 @@
         <endpoint endpoint-name="GetCarsWSDLPort" interface-name="ns4:GetCarsWSDLPortType" name="endpoint4" service-name="ns4:GetCarsWSDLService"/>
         <endpoint endpoint-name="RentCarWSDLPort" interface-name="ns5:RentCarWSDLPortType" name="endpoint5" service-name="ns5:RentCarWSDLService"/>
         <endpoint endpoint-name="GetCarWSDLPort" interface-name="ns6:GetCarWSDLPortType" name="endpoint6" service-name="ns6:GetCarWSDLService"/>
-        <endpoint display-name="GetCarPartnerLink" endpoint-name="GetCarWSDLPortTypeRole_myRole" file-path="GetCarProcess.bpel" interface-name="ns6:GetCarWSDLPortType" name="endpoint7" process-name="GetCarProcess" service-name="ns7:GetCarPartnerLink"/>
-        <endpoint display-name="GetCarsPartnerLink" endpoint-name="GetCarsWSDLPortTypeRole_myRole" file-path="GetCarsProcess.bpel" interface-name="ns4:GetCarsWSDLPortType" name="endpoint8" process-name="GetCarsProcess" service-name="ns8:GetCarsPartnerLink"/>
-        <endpoint display-name="RentCarPartnerLink" endpoint-name="RentCarWSDLPortTypeRole_myRole" file-path="RentCarProcess.bpel" interface-name="ns5:RentCarWSDLPortType" name="endpoint9" process-name="RentCarProcess" service-name="ns9:RentCarPartnerLink"/>
-        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="GetCarProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint10" process-name="GetCarProcess" service-name="ns7:KutzPartnerLink"/>
-        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="GetCarProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint11" process-name="GetCarProcess" service-name="ns7:BechPartnerLink"/>
-        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="GetCarsProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint12" process-name="GetCarsProcess" service-name="ns8:BechPartnerLink"/>
-        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="GetCarsProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint13" process-name="GetCarsProcess" service-name="ns8:KutzPartnerLink"/>
-        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint14" process-name="RentCarProcess" service-name="ns9:BechPartnerLink"/>
-        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint15" process-name="RentCarProcess" service-name="ns9:KutzPartnerLink"/>
-        <endpoint display-name="HubServicePartnerLink" endpoint-name="HubServiceRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns2:HubService" name="endpoint16" process-name="RentCarProcess" service-name="ns9:HubServicePartnerLink"/>
+        <endpoint endpoint-name="GetBookedRentsWSDLPort" interface-name="ns7:GetBookedRentsWSDLPortType" name="endpoint7" service-name="ns7:GetBookedRentsWSDLService"/>
+        <endpoint display-name="BPELPartnerLink" endpoint-name="GetBookedRentsWSDLPortTypeRole_myRole" file-path="GetBookedRentsProcess.bpel" interface-name="ns7:GetBookedRentsWSDLPortType" name="endpoint8" process-name="GetBookedRentsProcess" service-name="ns8:BPELPartnerLink"/>
+        <endpoint display-name="GetCarPartnerLink" endpoint-name="GetCarWSDLPortTypeRole_myRole" file-path="GetCarProcess.bpel" interface-name="ns6:GetCarWSDLPortType" name="endpoint9" process-name="GetCarProcess" service-name="ns9:GetCarPartnerLink"/>
+        <endpoint display-name="GetCarsPartnerLink" endpoint-name="GetCarsWSDLPortTypeRole_myRole" file-path="GetCarsProcess.bpel" interface-name="ns4:GetCarsWSDLPortType" name="endpoint10" process-name="GetCarsProcess" service-name="ns10:GetCarsPartnerLink"/>
+        <endpoint display-name="RentCarPartnerLink" endpoint-name="RentCarWSDLPortTypeRole_myRole" file-path="RentCarProcess.bpel" interface-name="ns5:RentCarWSDLPortType" name="endpoint11" process-name="RentCarProcess" service-name="ns11:RentCarPartnerLink"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="HubServiceRole_partnerRole" file-path="GetBookedRentsProcess.bpel" interface-name="ns2:HubService" name="endpoint12" process-name="GetBookedRentsProcess" service-name="ns8:PartnerLink1"/>
+        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="GetCarProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint13" process-name="GetCarProcess" service-name="ns9:KutzPartnerLink"/>
+        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="GetCarProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint14" process-name="GetCarProcess" service-name="ns9:BechPartnerLink"/>
+        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="GetCarsProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint15" process-name="GetCarsProcess" service-name="ns10:BechPartnerLink"/>
+        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="GetCarsProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint16" process-name="GetCarsProcess" service-name="ns10:KutzPartnerLink"/>
+        <endpoint display-name="BechPartnerLink" endpoint-name="BechCarRentalWSRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns1:BechCarRentalWS" name="endpoint17" process-name="RentCarProcess" service-name="ns11:BechPartnerLink"/>
+        <endpoint display-name="KutzPartnerLink" endpoint-name="KutzCarRentalWSRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns3:KutzCarRentalWS" name="endpoint18" process-name="RentCarProcess" service-name="ns11:KutzPartnerLink"/>
+        <endpoint display-name="HubServicePartnerLink" endpoint-name="HubServiceRole_partnerRole" file-path="RentCarProcess.bpel" interface-name="ns2:HubService" name="endpoint19" process-name="RentCarProcess" service-name="ns11:HubServicePartnerLink"/>
     </endpoints>
     <service-units>
-        <service-engine-service-unit artifacts-zip="CarRentalBPEL.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="CarRentalCA-CarRentalBPEL" unit-name="CarRentalBPEL" unknown="false" x="148" y="99">
-            <provides endpoint="endpoint7"/>
+        <service-engine-service-unit artifacts-zip="CarRentalBPEL.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="CarRentalCA-CarRentalBPEL" unit-name="CarRentalBPEL" unknown="false" x="143" y="99">
             <provides endpoint="endpoint8"/>
             <provides endpoint="endpoint9"/>
-            <consumes endpoint="endpoint10"/>
-            <consumes endpoint="endpoint11"/>
+            <provides endpoint="endpoint10"/>
+            <provides endpoint="endpoint11"/>
             <consumes endpoint="endpoint12"/>
             <consumes endpoint="endpoint13"/>
             <consumes endpoint="endpoint14"/>
             <consumes endpoint="endpoint15"/>
             <consumes endpoint="endpoint16"/>
+            <consumes endpoint="endpoint17"/>
+            <consumes endpoint="endpoint18"/>
+            <consumes endpoint="endpoint19"/>
         </service-engine-service-unit>
         <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="CarRentalCA-sun-http-binding" unit-name="sun-http-binding">
             <ports>
-                <port x="68" y="187">
+                <port x="68" y="39">
+                    <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetBookedRentsWSDL.wsdl#xpointer(/definitions/service[@name='GetBookedRentsWSDLService']/port[@name='GetBookedRentsWSDLPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint7"/>
+                    <provides endpoint="endpoint7"/>
+                </port>
+                <port x="68" y="261">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarsWSDL.wsdl#xpointer(/definitions/service[@name='GetCarsWSDLService']/port[@name='GetCarsWSDLPort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint4"/>
                     <provides endpoint="endpoint4"/>
                 </port>
-                <port x="68" y="39">
+                <port x="68" y="113">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarWSDL.wsdl#xpointer(/definitions/service[@name='GetCarWSDLService']/port[@name='GetCarWSDLPort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint6"/>
                     <provides endpoint="endpoint6"/>
                 </port>
-                <port x="68" y="434">
+                <port x="68" y="483">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/service[@name='BechCarRentalWS']/port[@name='BechCarRentalWSPort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint1"/>
                     <provides endpoint="endpoint1"/>
                 </port>
-                <port x="68" y="355">
+                <port x="68" y="409">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/HubService/HubService.wsdl#xpointer(/definitions/service[@name='HubService']/port[@name='HubServicePort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint2"/>
                     <provides endpoint="endpoint2"/>
                 </port>
-                <port x="68" y="276">
+                <port x="68" y="335">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/KutzCarRentalWS/KutzCarRentalWS.wsdl#xpointer(/definitions/service[@name='KutzCarRentalWS']/port[@name='KutzCarRentalWSPort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint3"/>
                     <provides endpoint="endpoint3"/>
                 </port>
-                <port x="68" y="113">
+                <port x="68" y="187">
                     <link xlink:href="../jbiServiceUnits/CarRentalBPEL/RentCarWSDL.wsdl#xpointer(/definitions/service[@name='RentCarWSDLService']/port[@name='RentCarWSDLPort'])" xlink:type="simple"/>
                     <consumes endpoint="endpoint5"/>
                     <provides endpoint="endpoint5"/>
@@ -67,18 +77,21 @@
         </binding-component-service-unit>
     </service-units>
     <connections>
-        <connection consumer="endpoint11" provider="endpoint1" state="unchanged"/>
-        <connection consumer="endpoint12" provider="endpoint1" state="unchanged"/>
         <connection consumer="endpoint14" provider="endpoint1" state="unchanged"/>
-        <connection consumer="endpoint4" provider="endpoint8" state="unchanged"/>
-        <connection consumer="endpoint6" provider="endpoint7" state="unchanged"/>
-        <connection consumer="endpoint5" provider="endpoint9" state="unchanged"/>
-        <connection consumer="endpoint16" provider="endpoint2" state="unchanged"/>
-        <connection consumer="endpoint10" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint15" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint17" provider="endpoint1" state="unchanged"/>
+        <connection consumer="endpoint7" provider="endpoint8" state="unchanged"/>
+        <connection consumer="endpoint4" provider="endpoint10" state="unchanged"/>
+        <connection consumer="endpoint6" provider="endpoint9" state="unchanged"/>
+        <connection consumer="endpoint5" provider="endpoint11" state="unchanged"/>
+        <connection consumer="endpoint12" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint19" provider="endpoint2" state="unchanged"/>
         <connection consumer="endpoint13" provider="endpoint3" state="unchanged"/>
-        <connection consumer="endpoint15" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint16" provider="endpoint3" state="unchanged"/>
+        <connection consumer="endpoint18" provider="endpoint3" state="unchanged"/>
     </connections>
     <porttypes>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetBookedRentsWSDL.wsdl#xpointer(/definitions/portType[@name='GetBookedRentsWSDLPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarsWSDL.wsdl#xpointer(/definitions/portType[@name='GetCarsWSDLPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarWSDL.wsdl#xpointer(/definitions/portType[@name='GetCarWSDLPortType'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/portType[@name='BechCarRentalWS'])" xlink:type="simple"/>
@@ -87,6 +100,7 @@
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/RentCarWSDL.wsdl#xpointer(/definitions/portType[@name='RentCarWSDLPortType'])" xlink:type="simple"/>
     </porttypes>
     <bindings>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetBookedRentsWSDL.wsdl#xpointer(/definitions/binding[@name='GetBookedRentsWSDLBinding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarsWSDL.wsdl#xpointer(/definitions/binding[@name='GetCarsWSDLBinding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarWSDL.wsdl#xpointer(/definitions/binding[@name='GetCarWSDLBinding'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/binding[@name='BechCarRentalWSPortBinding'])" xlink:type="simple"/>
@@ -95,6 +109,7 @@
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/RentCarWSDL.wsdl#xpointer(/definitions/binding[@name='RentCarWSDLBinding'])" xlink:type="simple"/>
     </bindings>
     <services>
+        <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetBookedRentsWSDL.wsdl#xpointer(/definitions/service[@name='GetBookedRentsWSDLService'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarsWSDL.wsdl#xpointer(/definitions/service[@name='GetCarsWSDLService'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/GetCarWSDL.wsdl#xpointer(/definitions/service[@name='GetCarWSDLService'])" xlink:type="simple"/>
         <link xlink:href="../jbiServiceUnits/CarRentalBPEL/localhost_8080/BechCarRentalWS/BechCarRentalWS.wsdl#xpointer(/definitions/service[@name='BechCarRentalWS'])" xlink:type="simple"/>
