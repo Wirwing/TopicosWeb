@@ -12,6 +12,8 @@ import javax.ejb.Stateless;
 import BechCarRental.Domain.Car;
 import BechCarRental.Domain.Reservation;
 import BechCarRental.Utils.Utils;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
 import java.text.ParseException;
 import java.util.ArrayList;
 
@@ -22,7 +24,7 @@ import java.util.ArrayList;
 @WebService(serviceName = "BechCarRentalWS")
 @Stateless()
 public class BechCarRentalWS {
-    
+
     /**
      * Obtener una lista de autos para rentar
      */
@@ -31,7 +33,7 @@ public class BechCarRentalWS {
         ArrayList<Car> cars = DataBase.getDB().getCarsTable();
         return cars;
     }
-    
+
     /**
      * Obtener la lista de reservaciones
      */
@@ -46,25 +48,31 @@ public class BechCarRentalWS {
      */
     @WebMethod(operationName = "createReservation")
     public Reservation createReservation(@WebParam(name = "rentalDate") String rentalDate,
-        @WebParam(name = "returnDate") String returnDate, 
-        @WebParam(name = "idCar") int idCar) throws ParseException {
-        
+            @WebParam(name = "returnDate") String returnDate,
+            @WebParam(name = "idCar") int idCar) throws ParseException {
+
         Reservation reservation = new Reservation();
         boolean isBooked = false;
         try {
             Car car = DataBase.getDB().getCarById(idCar);
             double pricePerDay = car.getPricePerDay();
             int totalDays = new Utils().calculateDays(rentalDate, returnDate);
-            double priceTotal = totalDays*pricePerDay;
+            double priceTotal = totalDays * pricePerDay;
             reservation = new Reservation(rentalDate, returnDate, idCar, priceTotal);
             isBooked = DataBase.getDB().addReservation(reservation, idCar);
             return reservation;
-        } catch (Exception e){
+        } catch (Exception e) {
             return reservation;
-        } 
-        
+        }
+
     }
-    
+
+    @WebMethod(operationName = "getReservation")
+    public Reservation getReservation(String reservationId) throws ParseException {
+        Reservation reservation = DataBase.getDB().getReservationById(reservationId);
+        return reservation;
+    }
+
     /**
      * Obtener un auto por id
      */
@@ -74,9 +82,8 @@ public class BechCarRentalWS {
         try {
             car = DataBase.getDB().getCarById(idCar);
             return car;
-        } catch (Exception e){
+        } catch (Exception e) {
             return car;
         }
     }
-      
 }

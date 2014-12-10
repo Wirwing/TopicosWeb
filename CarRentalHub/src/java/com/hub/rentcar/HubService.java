@@ -37,7 +37,7 @@ public class HubService {
     @WebMethod(operationName = "addRegistry")
     public CarRentLog addRegistry(@WebParam(name = "id")String id, 
     @WebParam(name = "userId") String userId, 
-    @WebParam(name = "providerUUID")String providerUUID) {
+    @WebParam(name = "providerUUID")String providerUUID, @WebParam(name = "brandName")String brandName) {
         
         CarRentLog log = new CarRentLog();
         log.setId(id);
@@ -45,6 +45,7 @@ public class HubService {
         log.setUserId(userId);
         log.setStatus(CarRentLog.BOOKED_STATUS);
         log.setBookedDate(df.format(new Date()));
+        log.setBrandName(brandName);
         
         registry.add(log);
         

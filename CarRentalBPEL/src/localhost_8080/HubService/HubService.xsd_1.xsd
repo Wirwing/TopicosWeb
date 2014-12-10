@@ -23,13 +23,14 @@
 </xs:complexType>
 
 <xs:complexType name="carRentLog">
-<xs:sequence>
-<xs:element name="bookedDate" type="xs:string" minOccurs="0"/>
-<xs:element name="id" type="xs:string" minOccurs="0"/>
-<xs:element name="providerUUID" type="xs:string" minOccurs="0"/>
-<xs:element name="status" type="xs:string" minOccurs="0"/>
-<xs:element name="userId" type="xs:string" minOccurs="0"/>
-</xs:sequence>
+    <xs:sequence>
+        <xs:element name="bookedDate" type="xs:string" minOccurs="0"/>
+        <xs:element name="id" type="xs:string" minOccurs="0"/>
+        <xs:element name="providerUUID" type="xs:string" minOccurs="0"/>
+        <xs:element name="status" type="xs:string" minOccurs="0"/>
+        <xs:element name="userId" type="xs:string" minOccurs="0"/>
+        <xs:element name="brandName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="getRentalProviders">
@@ -54,6 +55,7 @@
 <xs:element name="id" type="xs:string" minOccurs="0"/>
 <xs:element name="userId" type="xs:string" minOccurs="0"/>
 <xs:element name="providerUUID" type="xs:string" minOccurs="0"/>
+<xs:element name="brandName" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

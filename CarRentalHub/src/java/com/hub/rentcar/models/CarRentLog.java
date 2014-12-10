@@ -18,6 +18,7 @@ public class CarRentLog {
     private String providerUUID;
     private String bookedDate;
     private String status;
+    private String brandName;
     
     /**
      * @return the id
@@ -87,6 +88,14 @@ public class CarRentLog {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public String getBrandName() {
+        return brandName;
     }
     
 }

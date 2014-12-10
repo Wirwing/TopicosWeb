@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CarRentWebApp.GetBookedServiceReference;
+using CarRentWebApp.Models;
 
 namespace CarRentWebApp.Controllers
 {
@@ -16,6 +17,16 @@ namespace CarRentWebApp.Controllers
             var client = new GetBookedRentsWSDLPortTypeClient();
 
             var bookedRents = client.GetBookedRentsWSDLOperation("");
+
+            var rents = new List<Rent>();
+
+            foreach (var bookedRent in bookedRents)
+            {
+                rents.Add(new Rent()
+                {
+                    EndDate = bookedRent.
+                });
+            }
 
             return View();
         }
